@@ -1,0 +1,17 @@
+$date
+	Tue Dec 06 00:31:37 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module MoveGen_test $end
+$var wire 9 ! test3 [8:0] $end
+$var wire 9 " test2 [8:0] $end
+$var wire 1 # test1 $end
+$var wire 9 $ newO [8:0] $end
+$var reg 9 % o [8:0] $end
+$var reg 9 & x [8:0] $end
+$upscope $end

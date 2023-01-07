@@ -1,0 +1,73 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2009.vpi";
+S_000002777d1a6610 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_000002777d1a67a0 .scope module, "hardware_trojan" "hardware_trojan" 3 2;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "flush";
+    .port_info 1 /INPUT 8 "data_i";
+    .port_info 2 /INPUT 1 "vld_i";
+    .port_info 3 /INPUT 1 "rdy_i";
+    .port_info 4 /OUTPUT 8 "data_o";
+    .port_info 5 /OUTPUT 1 "vld_o";
+    .port_info 6 /OUTPUT 1 "rdy_o";
+o000002777d076fb8 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v000002777d1a6f80_0 .net "data_i", 7 0, o000002777d076fb8;  0 drivers
+v000002777d1a6bf0_0 .var "data_o", 7 0;
+o000002777d077018 .functor BUFZ 1, C4<z>; HiZ drive
+v000002777d1abb60_0 .net "flush", 0 0, o000002777d077018;  0 drivers
+o000002777d077048 .functor BUFZ 1, C4<z>; HiZ drive
+v000002777d1abc00_0 .net "rdy_i", 0 0, o000002777d077048;  0 drivers
+v000002777d1abca0_0 .var "rdy_o", 0 0;
+o000002777d0770a8 .functor BUFZ 1, C4<z>; HiZ drive
+v000002777d1abd40_0 .net "vld_i", 0 0, o000002777d0770a8;  0 drivers
+v000002777d1abde0_0 .var "vld_o", 0 0;
+E_000002777d1acd80 .event anyedge, v000002777d1abb60_0, v000002777d1a6f80_0, v000002777d1abd40_0, v000002777d1abc00_0;
+    .scope S_000002777d1a67a0;
+T_0 ;
+Ewait_0 .event/or E_000002777d1acd80, E_0x0;
+    %wait Ewait_0;
+    %load/vec4 v000002777d1abb60_0;
+    %dup/vec4;
+    %pushi/vec4 0, 0, 1;
+    %cmp/u;
+    %jmp/1 T_0.0, 6;
+    %dup/vec4;
+    %pushi/vec4 1, 0, 1;
+    %cmp/u;
+    %jmp/1 T_0.1, 6;
+    %jmp T_0.3;
+T_0.0 ;
+    %load/vec4 v000002777d1a6f80_0;
+    %store/vec4 v000002777d1a6bf0_0, 0, 8;
+    %load/vec4 v000002777d1abd40_0;
+    %store/vec4 v000002777d1abde0_0, 0, 1;
+    %load/vec4 v000002777d1abc00_0;
+    %store/vec4 v000002777d1abca0_0, 0, 1;
+    %jmp T_0.3;
+T_0.1 ;
+    %pushi/vec4 0, 255, 8;
+    %store/vec4 v000002777d1a6bf0_0, 0, 8;
+    %pushi/vec4 0, 1, 1;
+    %store/vec4 v000002777d1abde0_0, 0, 1;
+    %pushi/vec4 0, 1, 1;
+    %store/vec4 v000002777d1abca0_0, 0, 1;
+    %jmp T_0.3;
+T_0.3 ;
+    %pop/vec4 1;
+    %jmp T_0;
+    .thread T_0, $push;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "hardware_trojan.sv";
