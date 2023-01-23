@@ -29,17 +29,17 @@ Additional information:
 
 1. Configuration instructions.
 
->> No configurations necessary.
+* No configurations necessary.
 
 2. Installation instructions.
 
- > > I am using VisualStudioCode extensions:
+* I am using VisualStudioCode extensions:
  
  > > > https://github.com/mshr-h/vscode-verilog-hdl-support
  
  > > > https://www.wavetrace.io/
  
- > > Also I work with Icarus Verilog:
+* Also I work with Icarus Verilog:
  
  > > > official site: http://iverilog.icarus.com/
  
@@ -49,41 +49,42 @@ Additional information:
 
 3. Operating instructions.
 
- > > Add Icarus Verilog to PATH.
+* Add Icarus Verilog to PATH.
 
- > > Always use flag: -g2012 
+* Always use flag: -g2012 
 
 4. A file manifest (list of files included)
 
 > Verilog
-
+> >
 > > intro
-
+> >
 > Verilog-A
-
+> >
 > > intro
-
+> >
 > Verilog-AMS
-
+> >
 > > intro
-
+> >
 > SystemVerilog
-
+> >
 > > intro
-
+> >
 5. Copyright and licensing information.
 
-> > See sources table.
+* See sources table.
 
 6. Contact information for the distributor or programmer.
 
-> > git , mail.
+* git 
+* mail
 
 7. Known bugs.
 
-> > No bugs yet.
+* No bugs yet.
 
 8. Troubleshooting.
 
-> > See each folder.
+* See each folder.
 
