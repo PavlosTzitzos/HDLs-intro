@@ -7,22 +7,9 @@ If you are interested in Analog design with Verilog start from Verilog folder th
 
 If you are interesed in Mixed Signals (analog and digital) go to Verilog then to Verilog-A and then to Verilog-AMS.
 
-Source:
 
-> https://fpgatutorial.com/                                     | Verilog , SystemVerilog , VHDL , SystemC
->
-> https://www.doulos.com/knowhow/                               | Verilog , SystemVerilog , VHDL , SystemC
->
-> https://verificationguide.com/                                | SystemVerilog , UVM , SystemC
->
-> https://www.chipverify.com/                                   | Verilog , SystemVeriog , UVM
->
-> Digital Design , M. Morris Mano and Michael Ciletti , 6th Ed. | Verilog , SystemVerilog , VHDL
->
-> Digital Design , William J. Dally and R. Curtis Harting       | SystemVerilog
-
-| Rank |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |        SystemC     | 
-|-----:|---------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------| 
+| Rank |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
+|-----:|---------------------------------------------------------------|----------:---------|---------:----------|---------:----------|---------:----------|---------:----------| 
 |     1| https://fpgatutorial.com/                                     | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
 |     2| https://www.doulos.com/knowhow/                               | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
 |     3| https://verificationguide.com/                                |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | 
