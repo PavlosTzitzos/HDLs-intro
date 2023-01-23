@@ -9,15 +9,15 @@ If you are interesed in Mixed Signals (analog and digital) go to Verilog then to
 
 Source:
 
-> https://fpgatutorial.com/       | Verilog , SystemVerilog , VHDL , SystemC
+> https://fpgatutorial.com/                                     | Verilog , SystemVerilog , VHDL , SystemC
 >
-> https://www.doulos.com/knowhow/ | Verilog , SystemVerilog , VHDL , SystemC
+> https://www.doulos.com/knowhow/                               | Verilog , SystemVerilog , VHDL , SystemC
 >
-> https://verificationguide.com/  | SystemVerilog , UVM , SystemC
-
-> https://www.chipverify.com/     | Verilog , SystemVeriog , UVM
-
-> Digital Design , M. Morris Mano and Michael Ciletti , 6th Ed.
-
-> Digital Design , William J. Dally and R. Curtis Harting
+> https://verificationguide.com/                                | SystemVerilog , UVM , SystemC
+>
+> https://www.chipverify.com/                                   | Verilog , SystemVeriog , UVM
+>
+> Digital Design , M. Morris Mano and Michael Ciletti , 6th Ed. | Verilog , SystemVerilog , VHDL
+>
+> Digital Design , William J. Dally and R. Curtis Harting       | SystemVerilog
 
