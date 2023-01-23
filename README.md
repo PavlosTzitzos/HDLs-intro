@@ -9,7 +9,7 @@ If you are interesed in Mixed Signals (analog and digital) go to Verilog then to
 
 Source:
 
-> https://fpgatutorial.com/                                     | Verilog , SystemVerilog , VHDL , SystemC
+> https://fpgatutorial.com/  __________________________________ | Verilog , SystemVerilog , VHDL , SystemC
 >
 > https://www.doulos.com/knowhow/                               | Verilog , SystemVerilog , VHDL , SystemC
 >
