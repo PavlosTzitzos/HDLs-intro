@@ -37,7 +37,8 @@ Additional information:
     * Also I work with Icarus Verilog:
         + official site: http://iverilog.icarus.com/
         + download for windows: https://sourceforge.net/projects/iverilog/
-        + other guides: https://iverilog.fandom.com/wiki/Installation_Guide
+        + other guides: https://iverilog.fandom.com/wiki/Installation_Guide (old)
+        + new : https://steveicarus.github.io/iverilog/index.html
 3. Operating instructions:
     * Add Icarus Verilog to PATH.
     * Always use flag: -g2012 
