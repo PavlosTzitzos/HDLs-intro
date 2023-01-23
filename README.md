@@ -21,7 +21,10 @@ Sources that helped me starting learning HDL:
 |   4  | https://www.chipverify.com/                                   | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |                    |                    | 
 |   5  | Digital Design , M. Morris Mano and Michael Ciletti , 6th Ed. | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: |                    | 
 |   6  | Digital Design , William J. Dally and R. Curtis Harting       |                    | :heavy_check_mark: |                    |                    |                    | 
-| ... | ... | ... | ... | ... | ... | ... |
+|  ... |                            ...                                |         ...        |         ...        |        ...         |         ...        |         ...        |
+|------|---------------------------------------------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
+
+
 Additional information:
 
 1. Configuration instructions.
