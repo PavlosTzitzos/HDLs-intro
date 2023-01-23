@@ -9,7 +9,7 @@ If you are interesed in Mixed Signals (analog and digital) go to Verilog then to
 
 
 | Rank |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
-|-----:|---------------------------------------------------------------|----------:---------|---------:----------|---------:----------|---------:----------|---------:----------| 
+|-----:|---------------------------------------------------------------|-------------------|-------------------|-------------------|-------------------|-------------------| 
 |     1| https://fpgatutorial.com/                                     | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
 |     2| https://www.doulos.com/knowhow/                               | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
 |     3| https://verificationguide.com/                                |                    | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | 
