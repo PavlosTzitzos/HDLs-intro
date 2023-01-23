@@ -8,7 +8,9 @@ If you are interested in Analog design with Verilog start from Verilog folder th
 If you are interesed in Mixed Signals (analog and digital) go to Verilog then to Verilog-A and then to Verilog-AMS.
 
 
-| Rank |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
+
+
+| No. |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
 |:----:|:-------------------------------------------------------------:|:------------------:|:------------------:|:------------------:|:------------------:|:------------------:| 
 |  1   | https://fpgatutorial.com/                                     | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
 |  2   | https://www.doulos.com/knowhow/                               | :heavy_check_mark: | :heavy_check_mark: |                    | :heavy_check_mark: | :heavy_check_mark: | 
