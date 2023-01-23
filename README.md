@@ -27,64 +27,44 @@ Sources that helped me starting learning HDL:
 
 Additional information:
 
-1. Configuration instructions.
+1. Configuration instructions:
+    * No configurations necessary.
 
-* No configurations necessary.
-
-2. Installation instructions.
-
-* I am using VisualStudioCode extensions:
- 
- > > > https://github.com/mshr-h/vscode-verilog-hdl-support
- 
- > > > https://www.wavetrace.io/
- 
-* Also I work with Icarus Verilog:
- 
- > > > official site: http://iverilog.icarus.com/
- 
- > > > download for windows: https://sourceforge.net/projects/iverilog/
- 
- > > > other guides: https://iverilog.fandom.com/wiki/Installation_Guide
-
-3. Operating instructions.
-
-* Add Icarus Verilog to PATH.
-
-* Always use flag: -g2012 
-
-4. A file manifest (list of files included)
-
-> Verilog
-> >
-> > intro
-> >
-> Verilog-A
-> >
-> > intro
-> >
-> Verilog-AMS
-> >
-> > intro
-> >
-> SystemVerilog
-> >
-> > intro
-> >
-5. Copyright and licensing information.
-
-* See sources table.
-
-6. Contact information for the distributor or programmer.
-
-* git 
-* mail
-
-7. Known bugs.
-
-* No bugs yet.
-
-8. Troubleshooting.
-
-* See each folder.
+2. Installation instructions:
+    * I am using VisualStudioCode extensions:
+        + https://github.com/mshr-h/vscode-verilog-hdl-support
+        + https://www.wavetrace.io/
+    * Also I work with Icarus Verilog:
+        + official site: http://iverilog.icarus.com/
+        + download for windows: https://sourceforge.net/projects/iverilog/
+        + other guides: https://iverilog.fandom.com/wiki/Installation_Guide
+3. Operating instructions:
+    * Add Icarus Verilog to PATH.
+    * Always use flag: -g2012 
+4. A file manifest (list of files included):
+    > Verilog
+    > >
+    > > intro
+    > >
+    > Verilog-A
+    > >
+    > > intro
+    > >
+    > Verilog-AMS
+    > >
+    > > intro
+    > >
+    > SystemVerilog
+    > >
+    > > intro
+    > >
+5. Copyright and licensing information:
+    * See sources table.
+6. Contact information:
+    * git 
+    * mail
+7. Known bugs:
+    * No bugs yet.
+8. Troubleshooting:
+    * See each folder.
 
