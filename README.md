@@ -7,7 +7,15 @@ If you are interested in Analog design with Verilog start from Verilog folder th
 
 If you are interesed in Mixed Signals (analog and digital) go to Verilog then to Verilog-A and then to Verilog-AMS.
 
+Here is a simple flow chart:
 
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
 
 
 | No. |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
