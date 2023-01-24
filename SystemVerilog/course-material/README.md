@@ -28,5 +28,10 @@ Design Flow:
 ```
 
 
+General Model:
+--------------
 
+```mermaid
+
+```
 
