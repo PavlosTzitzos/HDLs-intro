@@ -9,6 +9,8 @@ graph TD;
     Verilog-->SystemVerilog;
     Verilog-->Verilog-A;
     Verilog-A-->Verilog-AMS;
+    SystemVerilog-->SystemVerilog-AMS;
+    Verilog-AMS-->SystemVerilog-AMS;
 ```
 
 Sources that helped me starting learning HDL:
