@@ -67,8 +67,9 @@ Additional information:
     
     <details>
     <summary>SystemVerilog</summary>
-        <p> >    intro</p>
-        <p> >    tutorial</p>
+        <p> >   course-material</p>
+        <p> >   tutorial</p>
+        <p> >   projects</p>
     </details>
     
 5. Copyright and licensing information:
