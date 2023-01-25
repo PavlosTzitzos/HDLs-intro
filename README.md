@@ -47,22 +47,30 @@ Additional information:
     * Add Icarus Verilog to PATH.
     * Always use flag: -g2012 
 4. A file manifest (list of files included):
-    > Verilog
-    > >
-    > > intro
-    > >
-    > Verilog-A
-    > >
-    > > intro
-    > >
-    > Verilog-AMS
-    > >
-    > > intro
-    > >
-    > SystemVerilog
-    > >
-    > > intro
-    > >
+    <details>
+    <summary>Verilog</summary>
+        <p> >   intro</p>
+        <p> >   tutorial</p>
+    </details>
+
+    <details>
+    <summary>Verilog-A</summary>
+        <p> >   intro</p>
+        <p> >   tutorial</p>
+    </details>
+    
+    <details>
+    <summary>Verilog-AMS</summary>
+        <p> >   intro</p>
+        <p> >   tutorial</p>
+    </details>
+    
+    <details>
+    <summary>SystemVerilog</summary>
+        <p> >    intro</p>
+        <p> >    tutorial</p>
+    </details>
+    
 5. Copyright and licensing information:
     * See sources table.
 6. Contact information:
