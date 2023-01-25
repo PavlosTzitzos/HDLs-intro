@@ -1,0 +1,44 @@
+$date
+	Wed Jan 25 15:25:44 2023
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module sample_fsm_moore_test $end
+$var wire 1 ! spray $end
+$var wire 1 " clrt $end
+$var reg 1 # clk $end
+$var reg 1 $ reset $end
+$var reg 1 % tdone $end
+$var reg 1 & token $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0&
+0%
+1$
+0#
+x"
+x!
+$end
+#10
+0!
+0"
+1#
+#15
+0$
+#20
+1&
+0#
+#30
+1!
+1"
+1#
+#35
