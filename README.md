@@ -82,4 +82,14 @@ Additional information:
     * No bugs yet.
 8. Troubleshooting:
     * See each folder.
+9. ToDo list:
+- [ ] Fix folders
+- [ ] Add simple examples
+- [ ] add basic modules
+- [ ] add comments
+- [ ] add testbenches with multiple tests and add explaination
+- [ ] complete the readme files
+- [ ] find projects and create folders with readme files explaining the project
+
+
 
