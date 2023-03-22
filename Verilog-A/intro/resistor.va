@@ -1,0 +1,7 @@
+module resistor (t1, t2);
+electrical t1, t2;
+parameter real r=1;
+branch (t1, t2) res;
+
+analog V(res) <+ r*I(res);
+endmodule
