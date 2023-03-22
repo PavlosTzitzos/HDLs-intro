@@ -1,0 +1,52 @@
+module memristor(TE,BE,XSV);
+
+electrical TE,BE;
+
+parameter eta;
+parameter xp;
+parameter alphap;
+parameter xn;
+parameter alphan;
+parameter Vp;
+parameter Ap;
+parameter Vn;
+parameter An;
+parameter ;
+parameter ;
+parameter ;
+parameter ;
+parameter ;
+
+analog begin
+    if (eta*V(TE,BE)>=0) begin
+        if (V(XSV)>=xp) begin
+            F=exp(-alphap*(V(XSV)-xp))*(((xp-V(XSV))/(1-xp))+1);
+        end else F=1;
+    end else if (eta*V(TE,BE)<0) begin
+        if (V(XSV)<=(1-xn)) begin
+            F=exp(alphan*(V(XSV)+xn-1))*(V(XSV)/(1-xn));
+        end else F=1;
+    end
+
+    if (V(TE,BE)>Vp) begin
+        G=Ap*(exp(V(TE,BE))-exp(Vp)); 
+    end else if (V(TE,BE)<=Vp ) begin
+        if (V(TE,BE)<-Vn) begin
+            G=-An*(exp(-V(TE,BE))-exp(Vn)); 
+        end else G=0;
+    end
+    
+    if (V(TE,BE)>=0) begin
+        I(BE,TE)<+(a1*V(XSV)*sinh(b*V(TE,BE))); 
+    end else if (V(TE,BE)<0) begin
+        I(BE,TE)<+(a2*V(XSV)*sinh(b*V(TE,BE))); 
+    end
+    
+    Gx=eta*G*F;
+    
+    I(XSV)<+c*ddt(V(XSV));
+    
+    I(XSV)<+ Gx *V(XSV);
+    
+    end
+endmodule

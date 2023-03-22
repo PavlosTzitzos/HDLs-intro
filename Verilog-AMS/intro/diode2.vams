@@ -1,0 +1,17 @@
+module diode (a , c);
+    inout a , c;
+    electrical a , c;
+    real Vd, Id , Is , Cp;
+    
+    analog begin
+        Is = 1e-15;
+        Cp = 1e-12;
+        Vd = V(a , c);
+        Id = Is*(exp(Vd / 26e-3) - 1);
+        // no t a l l ow e d in ADMS
+        I(a , c) <+ Id + ddt(Cp*V(a , c));
+        // a l l ow e d in ADMS
+        I(a , c) <+ Id ;
+        I(a , c) <+ ddt(Cp*V(a , c));
+    end
+endmodule

@@ -1,0 +1,20 @@
+module diode (a , c);
+    inout a , c;
+    electrical a , c;
+    
+    analog function real current;
+        input is , v;
+        begin
+            current = is*(exp(v / 26e-3) -1);
+        end
+    endfunction
+    
+    real Vd;
+    real Id ;
+    
+    analog begin
+        Vd = V(a , c);
+        Id = current(1e-15, Vd);
+        I(a , c) <+ Id;
+    end
+endmodule

@@ -1,0 +1,33 @@
+module diode (a , c);
+    //declare input and output ports:
+    inout a , c;
+    
+    //electrical wire:
+    electrical a , c;
+    
+    //analog function with name current:
+    analog function real current;
+        //input variables:
+        input is , v;
+        //Equation of current:
+        begin
+            current = is*(exp(v / 26e-3) -1);
+        end
+    endfunction
+    
+    // real valued variables:
+    real Vd;
+    real Id ;
+    
+    //analog block:
+    analog begin
+        //Vd = voltage difference of nodes a and c:
+        Vd = V(a , c);
+        //current equation of diode:
+        //Id = is*(exp(Vd / 26e-3) -1);
+        Id = current(1e-15, Vd);
+        //Current through the nodes a and c is equal to Id:
+        // (correct statement: Id contributes to the current through the nodes a and c)
+        I(a , c) <+ Id;// <+ contribution assignment
+    end
+endmodule

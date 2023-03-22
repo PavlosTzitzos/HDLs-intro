@@ -1,0 +1,37 @@
+`include "disciplines.vams"
+`include "constants.vams"
+// ADMS specific definitions
+
+`define attr(txt) (*txt*)
+module diode (a , c);
+    // device terminals
+    inout a , c;
+    electtrical a , c;
+    // internal node
+    electrical ci;
+    // model parameters
+    parameter real Is = 1E-15 from [0:1]
+        `attr( info="saturation_current");
+    parameter real Cp = 1E-12 from [0:1]
+        `attr( info="parallel_capacitance");
+    parameter real Rs = 1.0 from (0:inf)
+        `attr( info="series_resistance");
+    parameter real Temp = 300 from (0:inf)
+        `attr( info="temperature" ) ;
+    real Vd, Id , fourkt , twoq , Qp;
+    
+    analog begin
+        Vd = V(a , ci);
+        Id = Is*(exp (Vd / 26e-3) - 1);
+        Qp = Cp*Vd;
+        I(a , ci) <+ Id;
+        I(a , ci) <+ ddt(Qp);
+        I(ci , c) <+ V(ci , c) / Rs;
+        begin: noise
+            fourkt = 4.0 * `P_K * Temp;
+            twoq = 2. 0 * `P_Q ;
+            I(ci , c) <+ white_noise( fourkt / Rs , "thermal");
+            I(a , ci) <+ white_noise( twoq * Id , "shot");
+        end // noise
+    end // analog
+endmodule
