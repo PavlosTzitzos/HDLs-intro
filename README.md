@@ -57,7 +57,7 @@ SystemVerilog (HDL | digital | Modelsim)
 
   - task
 
-Verilog-A (analog | SPICE simulator)
+Verilog-A (analog | LTSPICE)
 
 - modules
 
@@ -71,7 +71,7 @@ Verilog-A (analog | SPICE simulator)
 
 - testbench is a circuit (must be drawn)
 
-Verilog-AMS (analog + digital | ADMS simulator)
+Verilog-AMS (analog + digital | QUCS Studio)
 
 - modules
 
