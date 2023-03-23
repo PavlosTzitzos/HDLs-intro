@@ -13,6 +13,86 @@ graph TD;
     Verilog-AMS-->SystemVerilog-AMS;
 ```
 
+Basic differences:
+
+Verilog (HDL | digital | Icarus Verilog)
+
+- modules
+
+  - input/output/inout
+
+  - reg/wire
+
+  - always block
+
+  - assign
+
+- testbenches(also modules)
+
+  - timescale
+
+  - always block for clk
+
+  - initial block
+
+SystemVerilog (HDL | digital | Modelsim)
+
+- modules
+
+  - input/output/inout (do not use: inout)
+
+  - reg/wire/logic (use: logic)
+
+  - always/ always_comb/always_ff blocks (do not use: always block)
+
+  - assign
+
+- testbenches(also modules)
+
+  - timescale (do not use)
+
+  - always block for clk (prefer this)
+
+  - initial block
+
+  - task
+
+Verilog-A (analog | SPICE simulator)
+
+- modules
+
+  - input/output/inout
+
+  - electrical
+
+  - analog / analog function blocks (prefer: analog block)
+
+  - assign
+
+- testbench is a circuit (must be drawn)
+
+Verilog-AMS (analog + digital | ADMS simulator)
+
+- modules
+
+  - input/output/inout
+
+  - reg/wire/electrical
+
+  - always/ always_comb/always_ff blocks (do not use: always block)
+
+  - analog / analog function blocks (prefer: analog block)
+
+  - assign
+
+- include :
+
+  - constants.vams
+
+  - disciplines.vams
+
+- testbench is a circuit (must be drawn)
+
 Sources that helped me starting learning HDL:
 
 |  No. |                          Sources                              |       Verilog      |    SystemVerilog   |        UVM         |        VHDL        |      SystemC       | 
