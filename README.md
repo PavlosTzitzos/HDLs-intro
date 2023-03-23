@@ -13,8 +13,8 @@ graph TD;
     Verilog-AMS-->SystemVerilog-AMS;
 ```
 
-Basic differences:
-
+Basic differences
+-----------------
 Verilog (HDL | digital | Icarus Verilog)
 
 - modules
