@@ -1,0 +1,30 @@
+/* ideal diode model
+
+1       2 : ports p1(+) and p2(-)
+o--|>|--o
+  I-->    : current flow
+
+Equation  : switch on / off
+
+*/
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module diode (p1 , p2);
+    //declare input and output ports:
+    inout p1 , p2;
+    
+    //electrical wire:
+    electrical p1 , p2;
+    
+    //analog block:
+    analog begin
+    	if(V(p1,p2)<0) begin
+    		I(p1 , p2) <+ 0;
+    	end else begin
+    		V(p1 , p2) <+ 0;
+    	end
+    end
+endmodule
+
