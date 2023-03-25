@@ -1,16 +1,27 @@
-module resistor (t1, t2);
+/* resistor
 
-//electrical ports:
-electrical t1, t2;
+1          2 : ports p1(+) and p2(-)
+o--\/\/\/--o
+    I-->     : current flow
 
-//parameter of the module:
-parameter real r=1;
+Equation : V = R*I
 
-//output:
-branch (t1, t2) res;
+*/
 
-//analog block:
-analog V(res) <+ r*I(res);
-// inside the analog block declare the equation : V = r*I
+`include "constants.vams"
+`include "disciplines.vams"
+
+module resistor(p1,p2);
+
+inout p1,p2;
+
+electrical p1,p2;
+
+`define attr(txt) (*txt*)
+parameter real R = 1000.0 from (0.0:inf] `attr(info="Resistance" unit="Ohms");
+
+analog begin
+	V(p1,p2) <+ R*I(p1,p2);
+end
 
 endmodule
