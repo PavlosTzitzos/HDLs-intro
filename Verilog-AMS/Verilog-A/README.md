@@ -24,8 +24,7 @@ In this folder you will find only analog circuits
 
 10. To simulate a circuit place one simulation from the Components > simulations > ... and set the parameters
 
-11. Simulate with F2
+11. Compile with F2 (F2 also runs simulation)
 
-If you want to check your model for errors before creating the schematic run the simulation F2. It will have nothing to simulate but first thing is to check the 
-Verilog-A file. More details can be found at Help > Help index (F1) > Enhanced actions > Creating user models.
+More details can be found at Help > Help index (F1) > Enhanced actions > Creating user models.
 
