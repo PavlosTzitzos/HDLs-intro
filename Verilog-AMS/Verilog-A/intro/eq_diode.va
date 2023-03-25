@@ -1,0 +1,39 @@
+/* diode model using equation of current
+
+1       2 : ports p(+)(1) and n(-)(2)
+o--|>|--o
+  I-->    : current flow
+
+Equation  : I = Is * (e^(qV/hkT) - 1)
+
+I  : current through the diode
+Is : saturation current
+q  : charge of electron
+V  : voltage across the diode
+h  : ideality factor
+k  : Boltzmann constant
+T  : absolute temperature in K
+
+*/
+
+`include "disciplines.vams"
+`include "constants.vams"
+
+module eq_diode (p , n);
+    //declare input and output ports:
+    inout p , n;
+    
+    //electrical wire:
+    electrical p , n;
+    
+    `define attr(txt) (*txt*)
+    parameter real Is = 1e-15 from [0:inf]       `attr(info="Saturation current" unit="A");
+    parameter real h = 1      from [1:2]         `attr(info="Ideality factor");
+    parameter real Temp = 20  					 `attr(info="Temperature in °C" unit="°C");
+    
+    //analog block:
+    analog begin
+        //current equation of diode:
+        I(p , n) <+ Is*(limexp(`P_Q * V(p , n) / (h * `P_K * (Temp - 273.15)) ) -1);
+    end
+endmodule
