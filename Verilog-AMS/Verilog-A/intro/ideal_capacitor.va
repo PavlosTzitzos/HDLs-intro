@@ -1,0 +1,32 @@
+/* ideal capacitor module
+
+1      2 : ports p1(+) and p2(-)
+o--||--o
+  I-->   : current flow p1 --> p2
+
+Equation: i = C * dv/dt
+
+*/
+
+`include "disciplines.vams"
+`include "constants.vams"
+
+module ideal_capacitor(p1,p2);
+
+inout p1,p2;
+
+electrical p1,p2; // declare the ports p1 and p2
+
+// declare capacitance
+`define attr(txt) (*txt*)
+parameter real C = 1p from (0:inf) `attr(info="capacitance" unit="F");
+
+//branch (p1,p2) = cap; // declare a branch
+
+// analog block
+analog begin
+    // equation of capacitor
+    I(p1,p2) <+ C*ddt(V(p1,p2));
+end
+
+endmodule
