@@ -1,0 +1,26 @@
+/*
+
+1        2 : ports p1(+) and p2(-)
+o--uuuu--o
+   I-->    : current flow
+
+Equation   : v = L*di/dt
+
+*/
+
+`include "constants.vams"
+`include "disciplines.vams"
+
+module ideal_inductor(p1,p2);
+
+inout p1,p2;
+
+electrical p1,p2;
+
+`define attr(txt) (*txt*)
+parameter real L = 1n from (0:inf) `attr(info="Inductor" unit="H");
+
+analog begin
+	V(p1,p2) <+ L*ddt(I(p1,p2));
+end
+endmodule
