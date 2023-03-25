@@ -34,6 +34,6 @@ module eq_diode (p , n);
     //analog block:
     analog begin
         //current equation of diode:
-        I(p , n) <+ Is*(limexp(`P_Q * V(p , n) / (h * `P_K * (Temp - 273.15)) ) -1);
+        I(p , n) <+ Is*(exp(`P_Q * V(p , n) / (h * `P_K * (Temp + 273.15)) ) -1);
     end
 endmodule
