@@ -1,0 +1,429 @@
+
+/* Theme Styles - Common for all themes */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+}
+
+/* Light Theme Styles */
+.light-theme {
+    /* Light theme-specific styles */
+
+    /* Reset some default styles */
+    
+
+    /* Apply some basic styling */
+    
+
+    header {
+        background-color: #35a97e;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    nav {
+        background-color: #ffffff;
+        color: #000000;
+        flex-basis: 250px; /* Set the width of the navigation */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+    }
+    /*
+    nav ul li a:hover {
+        background-color: #000000;
+        color:#fff;
+    }
+    */
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    h1 a {
+        background-color: #35a97e;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+    /* Style for collapsible subsections */
+    nav ul ul {
+        display: none;
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    nav ul ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+    /* Show subsections when parent list item is hovered */
+    /*
+    nav ul li:hover ul {
+        display: block;
+    }
+    */
+    /* Style for collapsed sections in <main> */
+    main section.collapsed {
+        display: none;
+    }
+
+    main section h2 {
+        cursor: pointer;
+        color: #0077cc;
+    }
+
+    main section h2:hover {
+        text-decoration: underline;
+    }
+    /* Style for collapsed subsections in navigation */
+    nav ul ul.collapsed {
+        display: none;
+    }
+
+    nav ul ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    nav ul ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+    /* Style for collapsed section contents */
+    .collapsed {
+        display: none;
+    }
+
+    .collapsible .header {
+        cursor: pointer;
+        color: #0077cc;
+    }
+
+    .collapsible .header:hover {
+        text-decoration: underline;
+    }
+
+    /* Style for the sticky navigation */
+    .sticky {
+        position: sticky;
+        top: 0;
+        background-color: #ffffff; /* Background color for the navigation */
+        color: #000000; /* Text color for the navigation */
+        padding: 10px; /* Padding around the navigation links */
+        z-index: 100; /* Ensure the navigation appears above content */
+    }
+
+    /* Style for navigation links */
+    .sticky ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sticky ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sticky ul li a {
+        color: #000000;
+        text-decoration: none;
+        display: block;
+        padding: 5px 15px;
+        transition: background-color 0.2s;
+    }
+
+    /* Style for navigation links on hover */
+    .sticky ul li a:hover {
+        background-color: #555;
+    }
+    /* CSS styles for the footer */
+    .footer {
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+        background-color: #35a97e; /* Background color for the footer */
+        color: #ffffff; /* Text color for the footer */
+        padding: 10px; /* Padding for the footer content */
+        text-align: center; /* Center-align footer content */
+    }
+
+    /* Style for links within the footer (if needed) */
+    .footer a {
+        color: #ffffff; /* Text color for links in the footer */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    /* Style for links on hover (if needed) */
+    .footer a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
+}
+
+/*-----------------------------------------------*/
+
+/* Dark Theme Styles */
+
+.dark-theme {
+    /* Dark theme-specific styles */
+
+    /* Reset some default styles */
+    body, h1, h2, p {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Apply some basic styling */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+    }
+
+    header {
+        background-color: #000000;
+        color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .wrapper {
+        display: flex;
+    }
+
+    nav {
+        background-color: #000000;
+        color: #ffffff;
+        flex-basis: 250px; /* Set the width of the navigation */
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 10px 20px;
+    }
+    /*
+    nav ul li a:hover {
+        background-color: #000000;
+        color:#fff;
+    }
+    */
+    main {
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #000000;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    h1 a {
+        background-color: #000000;
+        color: #ffffff;
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    p {
+        margin-bottom: 20px;
+    }
+    /* Style for collapsible subsections */
+    nav ul ul {
+        display: none;
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    nav ul ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+    /* Show subsections when parent list item is hovered */
+    /*
+    nav ul li:hover ul {
+        display: block;
+    }
+    */
+    /* Style for collapsed sections in <main> */
+    main section.collapsed {
+        display: none;
+    }
+
+    main section h2 {
+        cursor: pointer;
+        color: #0077cc;
+    }
+
+    main section h2:hover {
+        text-decoration: underline;
+    }
+    /* Style for collapsed subsections in navigation */
+    nav ul ul.collapsed {
+        display: none;
+    }
+
+    nav ul ul {
+        list-style: none;
+        padding-left: 20px;
+    }
+
+    nav ul ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 0;
+    }
+
+    /* Style for collapsed section contents */
+    .collapsed {
+        display: none;
+    }
+
+    .collapsible .header {
+        cursor: pointer;
+        color: #0077cc;
+    }
+
+    .collapsible .header:hover {
+        text-decoration: underline;
+    }
+
+    /* Style for the sticky navigation */
+    .sticky {
+        position: sticky;
+        top: 0;
+        background-color: #000000; /* Background color for the navigation */
+        color: #ffffff; /* Text color for the navigation */
+        padding: 10px; /* Padding around the navigation links */
+        z-index: 100; /* Ensure the navigation appears above content */
+    }
+
+    /* Style for navigation links */
+    .sticky ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sticky ul li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sticky ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        display: block;
+        padding: 5px 15px;
+        transition: background-color 0.2s;
+    }
+
+    /* Style for navigation links on hover */
+    .sticky ul li a:hover {
+        background-color: #555;
+    }
+    /* CSS styles for the footer */
+    .footer {
+        position: bottom;
+        bottom: 0;
+        width: 100%;
+        background-color: #000000; /* Background color for the footer */
+        color: #ffffff; /* Text color for the footer */
+        padding: 10px; /* Padding for the footer content */
+        text-align: center; /* Center-align footer content */
+    }
+
+    /* Style for links within the footer (if needed) */
+    .footer a {
+        color: #ffffff; /* Text color for links in the footer */
+        text-decoration: none; /* Remove underline from links */
+    }
+
+    /* Style for links on hover (if needed) */
+    .footer a:hover {
+        text-decoration: underline; /* Add underline on hover */
+    }
+}

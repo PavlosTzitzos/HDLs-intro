@@ -1,0 +1,379 @@
+/* Light Theme Styles */
+.light-theme {
+    background-color: #fff;
+    color: #484848;
+}
+
+.light-theme .wrapper {
+    display: flex;
+}
+
+.light-theme header {
+    background-color: #ffffff;
+    color: #484848;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme nav {
+    background-color: #ffffff;
+    color: #484848;
+    flex-basis: 350px; /* Set the width of the navigation */
+    max-width: 350px;
+    min-width: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.light-theme nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.light-theme nav ul li a {
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+/* Style for collapsible subsections */
+.light-theme nav ul ul {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.light-theme nav ul ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.light-theme nav ul ul li a {
+    background-color: #ffffff;
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+/* Style for collapsed subsections in navigation */
+.light-theme nav ul ul.collapsed {
+    display: none;
+}
+
+.light-theme main {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.light-theme h1 a {
+    background-color: #ffffff;
+    color: #484848;
+    text-decoration: none;
+}
+
+.light-theme h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.light-theme p {
+    margin-bottom: 20px;
+}
+
+/* Show subsections when parent list item is hovered */
+/*
+nav ul li:hover ul {
+    display: block;
+}
+*/
+/* Style for collapsed sections in <main> */
+.light-theme main section.collapsed {
+    display: none;
+}
+
+.light-theme main section h2 {
+    cursor: pointer;
+    color: #0077cc;
+}
+
+.light-theme main section h2:hover {
+    text-decoration: underline;
+}
+
+/* Style for collapsed section contents */
+.light-theme .collapsed {
+    display: none;
+}
+
+.light-theme .collapsible .header {
+    cursor: pointer;
+    color: #0077cc;
+}
+
+.light-theme .collapsible .header:hover {
+    text-decoration: underline;
+}
+
+/* Style for the sticky navigation */
+.light-theme .sticky {
+    top: 0;
+    background-color: #ffffff; /* Background color for the navigation */
+    color: #484848; /* Text color for the navigation */
+    padding: 10px; /* Padding around the navigation links */
+    z-index: 100; /* Ensure the navigation appears above content */
+}
+
+/* Style for navigation links */
+.light-theme .sticky ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.light-theme .sticky ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.light-theme .sticky ul li a {
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    transition: background-color 0.2s;
+}
+
+/* Style for navigation links on hover */
+.light-theme .sticky ul li a:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+}
+/* CSS styles for the footer */
+.light-theme .footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffff; /* Background color for the footer */
+    color: #484848; /* Text color for the footer */
+    padding: 20px; /* Padding for the footer content */
+    text-align: center; /* Center-align footer content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for links within the footer (if needed) */
+.light-theme .footer a {
+    color: #484848; /* Text color for links in the footer */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.light-theme .footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Dark Theme Styles */
+.dark-theme {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.dark-theme .wrapper {
+    display: flex;
+}
+
+.dark-theme header {
+    background-color: #484848;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme nav {
+    background-color: #ffffff;
+    color: #484848;
+    flex-basis: 350px; /* Set the width of the navigation */
+    max-width: 350px;
+    min-width: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.dark-theme nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.dark-theme nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+/* Style for collapsible subsections */
+.dark-theme nav ul ul {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.dark-theme nav ul ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.dark-theme nav ul ul li a {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+/* Style for collapsed subsections in navigation */
+.dark-theme nav ul ul.collapsed {
+    display: none;
+}
+
+.dark-theme main {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 20px auto;
+    background-color: #484848;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-theme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.dark-theme h1 a {
+    background-color: #484848;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.dark-theme h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.dark-theme p {
+    margin-bottom: 20px;
+}
+
+/* Show subsections when parent list item is hovered */
+/*
+nav ul li:hover ul {
+    display: block;
+}
+*/
+/* Style for collapsed sections in <main> */
+.dark-theme main section.collapsed {
+    display: none;
+}
+
+.dark-theme main section h2 {
+    cursor: pointer;
+    color: #0077cc;
+}
+
+.dark-theme main section h2:hover {
+    text-decoration: underline;
+}
+
+/* Style for collapsed section contents */
+.dark-theme .collapsed {
+    display: none;
+}
+
+.dark-theme .collapsible .header {
+    cursor: pointer;
+    color: #0077cc;
+}
+
+.dark-theme .collapsible .header:hover {
+    text-decoration: underline;
+}
+
+/* Style for the sticky navigation */
+.dark-theme .sticky {
+    top: 0;
+    background-color: #484848; /* Background color for the navigation */
+    color: #ffffff; /* Text color for the navigation */
+    padding: 10px; /* Padding around the navigation links */
+    z-index: 100; /* Ensure the navigation appears above content */
+}
+
+/* Style for navigation links */
+.dark-theme .sticky ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dark-theme .sticky ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.dark-theme .sticky ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    transition: background-color 0.2s;
+}
+
+/* Style for navigation links on hover */
+.dark-theme .sticky ul li a:hover {
+    background-color: #0077cc;
+    color: #484848;
+}
+/* CSS styles for the footer */
+.dark-theme .footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: #484848; /* Background color for the footer */
+    color: #ffffff; /* Text color for the footer */
+    padding: 20px; /* Padding for the footer content */
+    text-align: center; /* Center-align footer content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for links within the footer (if needed) */
+.dark-theme .footer a {
+    color: #ffffff; /* Text color for links in the footer */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.dark-theme .footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
