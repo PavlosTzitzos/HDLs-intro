@@ -54,13 +54,60 @@
             </ul>
         </nav>
         <main>
-            <section id="section-3" class="collapsible">
+            <section id="section-3">
                 <section id="section-3-1" class="collapsible">
                     <div class="header">
                         <h2>3.1 Verilog Resources </h2>
                     </div>
                     <!-- Content for section 3.1 -->
                     <div class="contents">
+                        To deepen your understanding of Verilog and gain more insights into its usage, there is a wealth of resources available online. Below, you'll find a curated list of Verilog manuals, tutorials, videos, and articles to aid your learning journey: 
+
+Verilog Manuals and Official Documentation: 
+
+IEEE Standard for SystemVerilog - The official IEEE standard for the SystemVerilog hardware description language. 
+
+IEEE Standard for Verilog - The official IEEE standard for the Verilog hardware description language. 
+
+Verilog Tutorials: 
+
+ASIC World Verilog Tutorial - A comprehensive tutorial covering Verilog basics, constructs, and practical examples. Verilog Tutorial (asic-world.com) 
+
+FPGA4Fun Verilog Tutorial - A beginner-friendly Verilog tutorial with hands-on exercises. fpga4fun.com - HDL tutorials 
+
+Video Tutorials: 
+
+ 
+
+Articles and Blog Posts: 
+
+Verilog vs. VHDL: A Guide for FPGA Design - An article comparing Verilog and VHDL for FPGA design. Getting Started with the Verilog Hardware Description Language - Technical Articles (allaboutcircuits.com) 
+
+How to Write a Testbench in Verilog - A practical guide to creating testbenches in Verilog. 
+
+Understanding Blocking and Non-Blocking Assignments in Verilog - An article explaining the differences between blocking and non-blocking assignments in Verilog. 
+
+These resources offer a well-rounded perspective on Verilog, from official documentation to tutorials and practical examples. You can explore them to deepen your knowledge, address specific topics, and gain hands-on experience with Verilog. 
+
+https://fpgatutorial.com/ 
+
+https://www.doulos.com/knowhow/ 
+
+https://verificationguide.com/ 
+
+https://www.chipverify.com/ 
+
+https://www.systemverilog.in/p/systemverilog-tutorial.html 
+
+https://www.fpga4student.com/ 
+
+https://github.com/JeffDeCola/my-verilog-examples 
+
+https://systemverilogdesign.com/tag/multiply/ 
+
+Digital Design , M. Morris Mano and Michael Ciletti , 6th Ed. 
+
+Digital Design , William J. Dally and R. Curtis Harting 
                     </div>
                 </section>
 
@@ -70,6 +117,100 @@
                     </div>
                     <!-- Content for section 3.2 -->
                     <div class="contents">
+                        Before diving deeper into Verilog design, it's essential to understand some fundamental keywords and data structures. In this section, we'll explore key Verilog concepts and provide examples to illustrate their usage. 
+
+1. module: 
+
+module is a fundamental keyword in Verilog used to define hardware modules or blocks. 
+
+Modules encapsulate specific functionality or components of a design. 
+
+Example: 
+
+module and_gate ( 
+    input A, 
+    input B, 
+    output Y 
+); 
+    assign Y = A & B; 
+endmodule 
+ 
+
+2. input and output: 
+
+input and output are used to declare ports in a Verilog module. 
+
+input ports receive signals from external sources, while output ports transmit signals to other modules. 
+
+Example: 
+
+module and_gate ( 
+    input A, 
+    input B, 
+    output Y 
+); 
+    assign Y = A & B; 
+endmodule 
+ 
+
+3. assign: 
+
+The assign keyword is used to make continuous assignments in Verilog. 
+
+It assigns a value to an output port based on combinational logic. 
+
+Example: 
+
+assign Y = A & B; 
+ 
+
+4. always and begin/end: 
+
+always blocks define processes or events in Verilog. 
+
+The begin/end block is used to encapsulate a series of statements to execute within the always block. 
+
+Example: 
+
+always @(posedge clk) begin 
+    if (reset) begin 
+        // Reset logic 
+    end else begin 
+        // Normal operation 
+    end 
+end 
+ 
+
+5. if/else: 
+
+if/else statements are used for conditional execution of code. 
+
+They allow you to specify different actions based on conditions. 
+
+Example: 
+
+always @(posedge clk) begin 
+    if (reset) begin 
+        // Reset logic 
+    end else begin 
+        // Normal operation 
+    end 
+end 
+ 
+
+6. Data Types (reg and wire): 
+
+reg represents registers and is used for storing values. 
+
+wire represents wires and is used for connecting signals. 
+
+Example: 
+
+reg [7:0] counter; 
+wire result; 
+ 
+
+These basic Verilog keywords and data structures provide the foundation for describing digital hardware. Understanding their usage and how to combine them is essential for creating more complex designs. In the examples provided, we've demonstrated the syntax and usage of these elements. 
                     </div>
                 </section>
 
@@ -79,6 +220,124 @@
                     </div>
                     <!-- Content for section 3.3 -->
                     <div class="contents">
+                        Combinational logic forms the foundation of digital circuit design, enabling you to create circuits where the output depends solely on the current inputs. In this section, we'll delve into combinational logic using Verilog and provide examples to illustrate various combinational circuits. 
+
+1. Basic Logic Gates: 
+
+Verilog allows you to model basic logic gates like AND, OR, and XOR gates. These gates are the building blocks of more complex digital circuits. 
+
+Example: AND Gate 
+
+module and_gate ( 
+   input A, 
+   input B, 
+   output Y 
+); 
+   assign Y = A & B; 
+endmodule 
+ 
+
+2. Multiplexers (MUX): 
+
+Multiplexers are combinational circuits that select one of several inputs and route it to the output based on control signals. 
+
+Example: 2-to-1 Multiplexer 
+
+module mux_2to1 ( 
+   input A, 
+   input B, 
+   input select, 
+   output Y 
+); 
+   assign Y = (select) ? B : A; 
+endmodule 
+ 
+
+3. Demultiplexers (DeMUX): 
+
+Demultiplexers are combinational circuits that select one of several outputs and route it to the input based on control signals. 
+
+Example: 1-to-2 Demultiplexer 
+
+module demux_1to2 ( 
+   input A, 
+   input select, 
+   output Y0, 
+   output Y1, 
+); 
+   assign y0 = (select) ? 1'b0 : a; // Output 0 when select is 1, else input a  
+
+assign y1 = (select) ? a : 1'b0; // Output 1 when select is 1, else 0  
+
+endmodule 
+
+ 
+
+4. Decoders: 
+
+Decoders take an n-bit input and activate one of 2^n output lines based on the input value. 
+
+Example: 3-to-8 Decoder 
+
+module decoder_3to8 ( 
+   input [2:0] A, 
+   output [7:0] Y 
+); 
+   assign Y = (A == 3'b000) ? 8'b00000001 : 
+            (A == 3'b001) ? 8'b00000010 : 
+            (A == 3'b010) ? 8'b00000100 : 
+            (A == 3'b011) ? 8'b00001000 : 
+            (A == 3'b100) ? 8'b00010000 : 
+            (A == 3'b101) ? 8'b00100000 : 
+            (A == 3'b110) ? 8'b01000000 : 
+                            8'b10000000; 
+endmodule 
+ 
+
+5. Encoders: 
+
+Encoders take an 2^n - bit input and activate one of n output lines based on the input value. 
+
+Example: 2-to-4 Priority Encoder: 
+
+module priority_encoder_2to4 ( 
+   input wire [1:0] a,     // 2-bit Input 
+   output wire [3:0] y     // 4-bit Output 
+); 
+   assign y[0] = (a[0] == 1'b1) ? 1'b1 : 1'b0; 
+   assign y[1] = (a[1] == 1'b1) ? 1'b1 : (a[0] == 1'b1) ? 1'b0 : 1'b0; 
+   assign y[2] = (a[1] == 1'b1 && a[0] == 1'b1) ? 1'b1 : 1'b0; 
+   assign y[3] = (a[1] == 1'b0 && a[0] == 1'b0) ? 1'b1 : 1'b0; 
+endmodule 
+
+ 
+
+6. Arithmetic Logic Units (ALU): 
+
+ALUs perform arithmetic and logic operations, such as addition, subtraction, AND, OR, and more, based on control signals. 
+
+Example: 4-bit ALU 
+
+module alu_4bit ( 
+   input [3:0] A, 
+   input [3:0] B, 
+   input [2:0] opcode, 
+   output [3:0] Y 
+); 
+   always @(*) begin 
+      case (opcode) 
+         3'b000: Y = A + B; // Add 
+         3'b001: Y = A - B; // Subtract 
+         3'b010: Y = A & B; // AND 
+         3'b011: Y = A | B; // OR 
+         // Add more operations as needed 
+         default: Y = 4'bxxxx; // Output 'x' for unsupported opcode 
+      endcase 
+   end 
+endmodule 
+ 
+
+These examples provide a glimpse into the world of combinational logic in Verilog. Combinational circuits are essential for performing operations where the output depends only on the current input values. As you explore more complex designs, you'll build upon these basic building blocks to create intricate digital systems. 
                     </div>
                 </section>
 
@@ -88,6 +347,83 @@
                     </div>
                     <!-- Content for section 3.4 -->
                     <div class="contents">
+                        In this section, we will explore synchronous logic components that are integral to digital design. These components play a crucial role in sequential logic circuits and are widely used in various applications. 
+
+1. Flip-Flops (FFs): 
+
+Flip-flops are the fundamental building blocks of synchronous digital circuits. They are used for storing binary information and synchronizing signals with a clock. 
+
+Types of Flip-Flops: Discuss different types of flip-flops, including D Flip-Flops, JK Flip-Flops, and T Flip-Flops. Explain their characteristics and applications. 
+
+Clock Edge-Triggered Operation: Detail how flip-flops operate on the rising or falling edge of a clock signal, ensuring synchronous behavior. 
+
+Applications: Explain how flip-flops are used in sequential circuits to store states, perform data synchronization, and create memory elements. 
+
+2. Counters: 
+
+Counters are essential components for counting and sequencing operations in digital systems. They find applications in frequency division, event counting, and more. 
+
+Types of Counters: Explore different types of synchronous counters, including up counters and down counters. Discuss their functionality and use cases. 
+
+Modulo-N Counters: Introduce modulo-N counters, which are capable of counting up to a specified value N before resetting. 
+
+Applications: Explain how counters are employed in various applications, such as clock dividers and digital timers. 
+
+3. Memories: 
+
+Memory elements are pivotal for data storage in digital systems. We'll discuss different memory types and how they work within synchronous logic. 
+
+Memory Types: Describe various memory types, including Static RAM (SRAM) and Dynamic RAM (DRAM), highlighting their characteristics and differences. 
+
+Memory Interfaces: Explain how memory interfaces operate in synchronous systems, addressing data read and write operations. 
+
+4. Finite State Machines (FSMs): 
+
+Finite State Machines are critical for controlling sequential logic and managing complex operations. 
+
+Synchronous FSMs: Discuss the design and operation of synchronous FSMs, which synchronize state transitions with clock signals. 
+
+State Diagrams: Explain the representation of FSMs using state diagrams and how they guide the behavior of digital systems. 
+
+Applications: Explore the wide range of applications for synchronous FSMs, including digital controllers, protocol implementations, and more. 
+
+By understanding these advanced synchronous logic components, you'll gain valuable insights into the inner workings of digital systems and be well-equipped to design and implement complex digital circuits. 
+
+Additional Information :
+
+1. Flip-Flops (FFs): 
+
+Flip-flops are fundamental building blocks in digital design, serving as memory elements that store binary information. They are crucial for sequential logic circuits, where the output depends not only on the current input but also on the previous state. Flip-flops are synchronous devices, meaning they operate based on clock signals, ensuring precise timing and synchronization. 
+
+Types of Flip-Flops: 
+
+In this section, we'll explore different types of flip-flops commonly used in digital design: 
+
+D Flip-Flops: These are the simplest type of flip-flops and are often used for data storage and synchronization. A D flip-flop has a data input (D), a clock input (CLK), and an output (Q). It stores the value of D at the rising (or falling) edge of the clock. 
+
+JK Flip-Flops: JK flip-flops offer more flexibility than D flip-flops. They have two inputs: J (Set) and K (Reset). Depending on the inputs and clock edge, JK flip-flops can toggle, set, or reset their outputs. 
+
+T Flip-Flops: T flip-flops have a toggle input (T) that, when activated, toggles the output state. They are often used in frequency dividers and binary counters. 
+
+Clock Edge-Triggered Operation: 
+
+One of the defining characteristics of flip-flops is their clock edge-triggered operation. Flip-flops are sensitive to either the rising (positive) edge or falling (negative) edge of the clock signal, ensuring that changes in the input are captured precisely at the desired moment. This synchronization ensures the correct behavior of sequential circuits. 
+
+Applications: 
+
+Flip-flops have diverse applications in digital circuits: 
+
+Registers: They are used to create registers for storing data temporarily. 
+
+Memory Elements: In combination, flip-flops create memory elements, such as RAM cells. 
+
+State Machines: Flip-flops are the core components of finite state machines (FSMs), used in control units, protocol implementations, and more. 
+
+Clock Domain Crossing: In systems with multiple clock domains, flip-flops are employed for synchronization. 
+
+Understanding flip-flops is essential for digital designers, as they form the basis for more complex sequential circuits and provide the necessary building blocks for designing processors, controllers, and other digital systems. 
+
+
                     </div>
                 </section>
 
@@ -97,6 +433,29 @@
                     </div>
                     <!-- Content for section 3.5 -->
                     <div class="contents">
+                        Asynchronous logic plays a critical role in digital circuit design, particularly when dealing with events that don't rely on a clock signal for synchronization. In this section, we'll explore asynchronous logic concepts in Verilog and provide examples to illustrate their usage. 
+
+1. Latches: 
+
+Latches are simple asynchronous storage elements that store data when enabled. They are level-sensitive and can lead to timing hazards if not used carefully. 
+ 
+
+2. Flip-Flops: 
+
+Flip-flops are edge-triggered storage elements that are commonly used in synchronous designs to store data on clock edges. However, they can also be used asynchronously. 
+ 
+
+3. Metastability: 
+
+Metastability is a phenomenon where a flip-flop's output becomes unpredictable when it samples an input that changes near the clock edge. Proper synchronization techniques, like double synchronization with flip-flops, are used to mitigate metastability. 
+ 
+
+4. Asynchronous Input Handling: 
+
+In Verilog, asynchronous inputs, such as button presses or external signals, can be used to trigger specific actions or affect circuit behavior. 
+ 
+
+Asynchronous logic is crucial when dealing with external events that do not align with the clock signal, and understanding its behavior is essential for robust digital designs. 
                     </div>
                 </section>
             </section>
@@ -107,6 +466,7 @@
             <label for="theme-select">Theme:</label>
             <select id="theme-select">
                 <option value="light">Light</option>
+                <option value="green">Green</option>
                 <option value="dark">Dark</option>
                 <!-- Add more theme options as needed -->
             </select>

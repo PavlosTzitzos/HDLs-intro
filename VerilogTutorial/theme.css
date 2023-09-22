@@ -1,4 +1,236 @@
-/* Light Theme Styles */
+/* Green Theme Styles */
+.green-theme {
+    background-color: #fff;
+    color: #484848;
+}
+
+.green-theme .wrapper {
+    display: flex;
+}
+
+.green-theme header {
+    background-color: #99d1ab;
+    color: #000;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.green-theme nav {
+    background-color: #99d1ab;
+    color: #484848;
+    flex-basis: 350px; /* Set the width of the navigation */
+    max-width: 350px;
+    min-width: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.green-theme nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.green-theme nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.green-theme nav ul li a {
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+/* Style for collapsible subsections */
+.green-theme nav ul ul {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.green-theme nav ul ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.green-theme nav ul ul li a {
+    /*background-color: #ffffff;*/
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+/* Style for collapsed subsections in navigation */
+.green-theme nav ul ul.collapsed {
+    display: none;
+}
+
+.green-theme main {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 20px auto;
+    background-color: #99d1ab;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.green-theme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.green-theme h1 a {
+    background-color: #99d1ab;
+    color: #000;
+    text-decoration: none;
+}
+
+.green-theme h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.green-theme p {
+    margin-bottom: 20px;
+}
+
+/* Show subsections when parent list item is hovered */
+/*
+nav ul li:hover ul {
+    display: block;
+}
+*/
+/* Style for collapsed sections in <main> */
+.green-theme main section.collapsed {
+    display: none;
+}
+
+.green-theme main section h2 {
+    cursor: pointer;
+    color: #000;
+}
+
+.green-theme main section h2:hover {
+    text-decoration: underline;
+}
+
+/* Style for collapsed section contents */
+.green-theme .collapsed {
+    display: none;
+}
+
+.green-theme .collapsible .header {
+    cursor: pointer;
+    color: #0077cc;
+}
+
+.green-theme .collapsible .header:hover {
+    text-decoration: underline;
+}
+
+/* Style for the sticky navigation */
+.green-theme .sticky {
+    top: 0;
+    background-color: #99d1ab; /* Background color for the navigation */
+    color: #484848; /* Text color for the navigation */
+    padding: 10px; /* Padding around the navigation links */
+    z-index: 100; /* Ensure the navigation appears above content */
+}
+
+/* Style for navigation links */
+.green-theme .sticky ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.green-theme .sticky ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.green-theme .sticky ul li a {
+    color: #484848;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    transition: background-color 0.2s;
+}
+
+/* Style for navigation links on hover */
+.green-theme .sticky ul li a:hover {
+    background-color: #0077cc;
+    color: #ffffff;
+}
+/* CSS styles for the footer */
+.green-theme .footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: #99d1ab; /* Background color for the footer */
+    color: #484848; /* Text color for the footer */
+    padding: 20px; /* Padding for the footer content */
+    text-align: center; /* Center-align footer content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for links within the footer (if needed) */
+.green-theme .footer a {
+    color: #484848; /* Text color for links in the footer */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.green-theme .footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style for the code box container */
+.green-theme .code-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #428557;
+}
+
+/* Style for the code header (filename and copy button) */
+.green-theme .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    padding: 5px;
+}
+
+/* Style for the filename */
+.green-theme .filename {
+    font-weight: bold;
+}
+
+/* Style for the copy button */
+.green-theme .copy-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Style for the code block */
+.green-theme pre {
+    white-space: pre-wrap;
+}
+
+
+
+/*------------------------------------------------------------*/
+
+/* Ligth Theme Styles */
 .light-theme {
     background-color: #fff;
     color: #484848;
@@ -10,7 +242,7 @@
 
 .light-theme header {
     background-color: #ffffff;
-    color: #484848;
+    color: #000;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -56,7 +288,7 @@
 }
 
 .light-theme nav ul ul li a {
-    background-color: #ffffff;
+    /*background-color: #ffffff;*/
     color: #484848;
     text-decoration: none;
     display: block;
@@ -83,7 +315,7 @@
 
 .light-theme h1 a {
     background-color: #ffffff;
-    color: #484848;
+    color: #000;
     text-decoration: none;
 }
 
@@ -109,7 +341,7 @@ nav ul li:hover ul {
 
 .light-theme main section h2 {
     cursor: pointer;
-    color: #0077cc;
+    color: #000;
 }
 
 .light-theme main section h2:hover {
@@ -187,6 +419,48 @@ nav ul li:hover ul {
 .light-theme .footer a:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
+/* Style for the code box container */
+.light-theme .code-box {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+
+/* Style for the code header (filename and copy button) */
+.light-theme .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #000;
+    padding: 5px;
+}
+
+/* Style for the filename */
+.light-theme .filename {
+    font-weight: bold;
+}
+
+/* Style for the copy button */
+.light-theme .copy-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Style for the code block */
+.light-theme pre {
+    white-space: pre-wrap;
+}
+
+
+
+/*------------------------------------------------------------*/
 
 /* Dark Theme Styles */
 .dark-theme {
@@ -376,4 +650,42 @@ nav ul li:hover ul {
 /* Style for links on hover (if needed) */
 .dark-theme .footer a:hover {
     text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style for the code box container */
+.dark-theme .code-box {
+    border: 1px solid #333;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #484848;
+}
+
+/* Style for the code header (filename and copy button) */
+.dark-theme .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    color: #333;
+    padding: 5px;
+}
+
+/* Style for the filename */
+.dark-theme .filename {
+    font-weight: bold;
+}
+
+/* Style for the copy button */
+.dark-theme .copy-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Style for the code block */
+.dark-theme pre {
+    white-space: pre-wrap;
 }

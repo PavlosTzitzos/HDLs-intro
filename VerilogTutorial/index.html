@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verilog Tutorial</title>
     <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 </head>
 <body>
     <header>
@@ -59,6 +60,44 @@
                 <h2>Welcome to the Verilog Tutorial</h2>
                 <p>Here is a brief introduction to Verilog and its various aspects.</p>
             </section>
+            <section>
+                <div class="code-box">
+                    <div class="code-header">
+                        <span class="filename">and_gate.v</span>
+                        <button class="copy-button" data-code-id="code-1">Copy</button>
+                    </div>
+                    <pre><code class="language-verilog" id="code-1">
+// Code block 1
+module and_gate (
+    input wire A,
+    input wire B,
+    output wire Y
+);
+    assign Y = A & B;
+endmodule
+                    </code></pre>
+                </div>
+                
+                <div class="code-box">
+                    <div class="code-header">
+                        <span class="filename">or_gate.v</span>
+                        <button class="copy-button" data-code-id="code-2">Copy</button>
+                    </div>
+                    <pre><code class="language-verilog" id="code-2">
+// Code block 2
+module or_gate (
+    input wire A,
+    input wire B,
+    output wire Y
+);
+    assign Y = A | B;
+endmodule
+                    </code></pre>
+                </div>
+                
+                <!-- Add more code boxes as needed -->
+                
+            </section>
         </main>
     </div>
     <footer class="footer">
@@ -67,6 +106,7 @@
             <label for="theme-select">Theme:</label>
             <select id="theme-select" >
                 <option value="light">Light</option>
+                <option value="green">Green</option>
                 <option value="dark">Dark</option>
                 <!-- Add more theme options as needed -->
             </select>
@@ -76,6 +116,10 @@
     </footer>
     <script src="theme.js"></script>
     <script src="navigation.js"></script>
+    <!-- Include Prism.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
+    <script src="copy.js"></script>
     <script>
         // JavaScript to show/hide section contents on header click
         const sections = document.querySelectorAll('.collapsible');

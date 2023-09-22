@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Verilog Tutorial</title>
     <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="../theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 </head>
 <body>
     <header>
-        <h1>Verilog Tutorial</h1>
+        <h1><a href="../index.html">Verilog Tutorial</a></h1>
         <h2>Section 2: Environment and Tools</h2>
     </header>
 
@@ -28,9 +29,9 @@
                 <li>
                     <span class="section-title">Section 2: Environment and Tools</span>
                     <ul class="subsection">
-                        <li><a href="#section-2">2.1 Editors</a></li>
-                        <li><a href=".#section-2">2.2 Tools for Simulation</a></li>
-                        <li><a href="#section-2">2.3 Basic Example for Each Tool</a></li>
+                        <li><a href="#section-2-1">2.1 Editors</a></li>
+                        <li><a href="#section-2-2">2.2 Tools for Simulation</a></li>
+                        <li><a href="#section-2-3">2.3 Basic Example for Each Tool</a></li>
                     </ul>
                 </li>
                 <li>
@@ -54,13 +55,89 @@
             </ul>
         </nav>
         <main>
-            <section id="section-2" class="collapsible">
+            <section id="section-2">
                 <section id="section-2-1" class="collapsible">
                     <div class="header">
                         <h2>2.1 Editors </h2>
                     </div>
                     <!-- Content for section 2.1 -->
                     <div class="contents">
+                        <p>
+                            Choosing the right text editor or integrated development environment (IDE) is crucial for writing and managing Verilog code efficiently. Below, we'll explore some popular editors and IDEs suitable for Verilog programming: 
+                        </p>
+                        <ul>
+                            1. Visual Studio Code (VS Code): 
+                            <ul>
+                                <li>Platform: Windows, macOS, Linux </li>
+
+                                <li>Features: 
+                                    <ul>
+                                        <li>Lightweight and highly customizable code editor. </li>
+                                        <li>Offers a wide range of extensions, including Verilog support through extensions like "Verilog-HDL/SystemVerilog" and "Verilog Language Server." </li>
+                                        <li>Integrated Git version control.</li>
+                                    </ul>
+                                </li>
+
+                                <li>Setup: Install VS Code and search for Verilog-related extensions in the Visual Studio Code Marketplace. </li>
+                            </ul>
+                            2. Xilinx Vivado: 
+                            <ul>
+                                <li>Platform: Windows, Linux (limited macOS support) </li>
+                                
+                                <li>Features:
+                                    <ul>
+                                        <li>Integrated development environment specifically designed for FPGA design, including Verilog support. </li>
+                                        <li>Offers a graphical interface for designing, simulating, and synthesizing FPGA circuits. </li>
+                                        <li>Provides a comprehensive toolchain for Xilinx FPGA development. </li>
+                                    </ul>
+                                </li>
+
+                                <li>Setup: Download and install Xilinx Vivado, which includes the Vivado IDE. </li>
+                            </ul>
+                            3. ModelSim - Intel FPGA Starter Edition: 
+                            <ul>
+                                <li>Platform: Windows, Linux (limited macOS support) </li>
+
+                                <li>
+                                    Features: 
+                                    <ul>
+                                        <li>A powerful simulation and debugging tool commonly used for FPGA and ASIC design. </li>
+                                        <li>Supports Verilog and SystemVerilog.</li>
+                                        <li>The Starter Edition is available for free with some limitations.</li>
+                                    </ul>
+                                </li>
+                                <li>Setup: Download and install ModelSim - Intel FPGA Starter Edition from the Intel website. </li>
+                            </ul>
+                            4. Notepad++: 
+                            <ul>
+                                <li>Platform: Windows</li>
+                                <li>
+                                    Features: 
+                                    <ul>
+                                        <li>Lightweight and fast text editor.</li>
+                                        <li>Offers syntax highlighting for Verilog and other programming languages. </li>
+                                        <li>Useful for basic Verilog code editing. </li>
+                                    </ul>
+                                </li>
+                                <li>Setup: Download and install Notepad++ from the official website. You may need to manually configure syntax highlighting. </li>
+                            </ul>
+                            5. Emacs with Verilog Mode: 
+                            <ul>
+                                <li>Platform: Windows, macOS, Linux </li>
+                                <li>
+                                    Features: 
+                                    <ul>
+                                        <li>Emacs is a highly extensible and customizable text editor. </li>
+                                        <li>Verilog Mode is an extension that provides Verilog-specific features like syntax highlighting, indentation, and code navigation. </li>
+                                    </ul>
+                                </li>
+                                <li>Setup: Install Emacs and add the Verilog Mode package for Verilog code editing. </li>
+                            </ul>
+                        </ul>
+                        <p>
+                            When choosing an editor or IDE, consider your specific requirements, project complexity, and personal preferences. VS Code and specialized tools like Xilinx Vivado and ModelSim are suitable for complex FPGA and ASIC projects, while simpler editors like Notepad++ and Emacs can be valuable for learning and basic Verilog tasks. 
+                            In this tutorial, we'll use Visual Studio Code as a versatile and accessible option for Verilog programming. However, feel free to explore other editors and IDEs based on your needs. 
+                        </p>
                     </div>
                 </section>
 
@@ -70,6 +147,49 @@
                     </div>
                     <!-- Content for section 2.2 -->
                     <div class="contents">
+                        Simulation is a crucial step in the Verilog design process, allowing you to test and verify your hardware designs before physical implementation. If you're just getting started with Verilog and want to use free simulation tools, the following options are available: 
+
+1. Icarus Verilog (iverilog): 
+
+Platform: Windows, macOS, Linux 
+
+Features: 
+
+Open-source Verilog simulator that supports a subset of Verilog 2005. 
+
+Suitable for small to medium-sized projects and educational purposes. 
+
+Includes a command-line interface for simulation and waveform viewing. 
+
+Setup: Download and install Icarus Verilog from the official website or use package managers like apt (Linux) or Homebrew (macOS). 
+
+2. ModelSim - Intel FPGA Starter Edition: 
+
+Platform: Windows, Linux (limited macOS support) 
+
+Features: 
+
+Although ModelSim - Intel FPGA Starter Edition is primarily a paid tool, it offers a free version with some limitations. 
+
+Provides a robust simulation environment for Verilog and SystemVerilog. 
+
+Suitable for both beginners and experienced designers. 
+
+Setup: Download and install ModelSim - Intel FPGA Starter Edition from the Intel website. Note that you may need to register for a free license. 
+
+3. EDA Playground: 
+
+Platform: Web-based (no installation required) 
+
+Features: 
+
+A cloud-based Verilog simulator that allows you to write, simulate, and share Verilog code in your web browser. 
+
+Great for quick Verilog experimentation without any setup. 
+
+Usage: Visit the EDA Playground website, create an account (if needed), and start writing and simulating Verilog code directly in your browser. 
+
+These free simulation tools provide excellent options for learning and experimenting with Verilog. Icarus Verilog is particularly well-suited for educational purposes and smaller projects, while ModelSim - Intel FPGA Starter Edition offers more advanced features, even in its free version. 
                     </div>
                 </section>
 
@@ -79,9 +199,120 @@
                     </div>
                     <!-- Content for section 2.3 -->
                     <div class="contents">
+                        To get you started with Verilog on different operating systems, we'll provide basic "Hello World" style examples for writing, compiling, and simulating Verilog code. You'll find instructions for Windows, macOS, and Linux below: 
+
+Windows: 
+
+Writing Verilog Code: 
+
+Open your preferred text editor (e.g., Notepad++, Visual Studio Code). 
+
+Write a simple Verilog module, such as an AND gate: 
+
+module and_gate ( 
+    input A, 
+    input B, 
+    output Y 
+); 
+    assign Y = A & B; 
+endmodule 
+ 
+
+Save the file with a “.v” extension, e.g., and_gate.v. Is good to name the file with the same name the module has. 
+
+Compiling and Simulating with Icarus Verilog: 
+
+Open Command Prompt. 
+
+Navigate to the directory where your Verilog file is located using the cd command. 
+
+Compile your Verilog code using Icarus Verilog: 
+
+Copy code 
+
+iverilog -o and_gate_tb and_gate.v 
+ 
+
+This command compiles your code and creates an executable file named and_gate_tb. 
+
+Simulate the compiled code: 
+
+Copy code 
+
+vvp and_gate_tb 
+ 
+
+You'll see the simulation results in the console. 
+
+macOS: 
+
+Writing Verilog Code: 
+
+Open a text editor such as Visual Studio Code or any text editor of your choice. 
+
+Write your Verilog module, for example, an AND gate, as shown in the Windows example above. 
+
+Save the file with a .v extension, e.g., and_gate.v. 
+
+Compiling and Simulating with Icarus Verilog: 
+
+Open Terminal. 
+
+Navigate to the directory where your Verilog file is located using the cd command. 
+
+Compile your Verilog code with Icarus Verilog: 
+
+Copy code 
+
+iverilog -o and_gate_tb and_gate.v 
+ 
+
+Simulate the compiled code: 
+
+Copy code 
+
+vvp and_gate_tb 
+ 
+
+The simulation results will be displayed in the Terminal. 
+
+Linux: 
+
+Writing Verilog Code: 
+
+Launch your preferred text editor in Linux, such as Gedit, Visual Studio Code, or any other editor of your choice. 
+
+Write your Verilog module, for instance, an AND gate, similar to the previous examples. 
+
+Save the file with a .v extension, e.g., and_gate.v. 
+
+Compiling and Simulating with Icarus Verilog: 
+
+Open a Terminal window. 
+
+Navigate to the directory where your Verilog file is located using the cd command. 
+
+Compile your Verilog code with Icarus Verilog: 
+
+Copy code 
+
+iverilog -o and_gate_tb and_gate.v 
+ 
+
+Simulate the compiled code: 
+
+Copy code 
+
+vvp and_gate_tb 
+ 
+
+You'll see the simulation results in the Terminal. 
+
+These basic examples should help you get started with Verilog on Windows, macOS, and Linux. You can replace the Verilog module in the examples with your own designs as you progress in your Verilog learning journey. 
                     </div>
                 </section>
             </section>
+        </main>
     </div>
     <footer class="footer">
         <!-- Theme Selection Dropdown -->
@@ -89,6 +320,7 @@
             <label for="theme-select">Theme:</label>
             <select id="theme-select">
                 <option value="light">Light</option>
+                <option value="green">Green</option>
                 <option value="dark">Dark</option>
                 <!-- Add more theme options as needed -->
             </select>
@@ -96,22 +328,16 @@
         <!-- Footer content goes here -->
         <p>&copy; 2023 Verilog Tutorial</p>
     </footer>
-</main>
 
-<script src="../theme.js"></script>
-<script src="../navigation.js"></script>
-<script>
-    // JavaScript to toggle subsections on click for navigation panel
-    const sectionTitles = document.querySelectorAll('.section-title');
-
-    sectionTitles.forEach((title) => {
-        title.addEventListener('click', () => {
-            const subsection = title.nextElementSibling;
-            subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
-        });
-    });
-    // JavaScript to show/hide section contents on header click for body
-    const sections = document.querySelectorAll('.collapsible');
+    <script src="../theme.js"></script>
+    <script src="../navigation.js"></script>
+    <!-- Include Prism.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
+    <script src="../copy.js"></script>
+    <script>
+        // JavaScript to show/hide section contents on header click
+        const sections = document.querySelectorAll('.collapsible');
         
         sections.forEach((section) => {
             const header = section.querySelector('.header');
@@ -124,6 +350,15 @@
                 contents.style.display = contents.style.display === 'none' ? 'block' : 'none';
             });
         });
-</script>
+        // JavaScript to toggle subsections on click
+        const sectionTitles = document.querySelectorAll('.section-title');
+
+        sectionTitles.forEach((title) => {
+            title.addEventListener('click', () => {
+                const subsection = title.nextElementSibling;
+                subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
 </body>
 </html>
