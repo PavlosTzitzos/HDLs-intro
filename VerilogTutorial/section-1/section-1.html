@@ -367,6 +367,13 @@
                     </p>
                 </div>
             </section>
+            
+            <section class="pages">
+                <!-- Content of your section goes here -->
+                <a href="../index.html" id="prevLink">Previous</a>
+                <a href="../section-2/section-2.html" id="nextLink">Next</a>
+            </section>
+            
         </section>
         </main>
     </div>
@@ -383,6 +390,12 @@
             </select>
         </div>
         <!-- Footer content goes here -->
+        <a href="https://github.com/PavlosTzitzos/Verilog-Code" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Repository" class="github-logo">
+        </a>
+
+        <a href="https://cimi.gr/" target="_blank">CIMI</a>
+
         <p>&copy; 2023 Verilog Tutorial</p>
     </footer>
     
@@ -411,11 +424,31 @@
         const sectionTitles = document.querySelectorAll('.section-title');
 
         sectionTitles.forEach((title) => {
+            const subsection = title.nextElementSibling;
+            subsection.style.display = 'none'; // Initially hide the subsections
+
             title.addEventListener('click', () => {
-                const subsection = title.nextElementSibling;
                 subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
             });
         });
+
+        // Function to open the GitHub link in a new tab
+        function openGitHubLink(gitHubLink) {
+            window.open(gitHubLink, '_blank');
+        }
+        /*
+        // Function to trigger the download of a GitHub file
+        function downloadGitHubFile(gitHubLink) {
+            // Create an anchor element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = gitHubLink;
+            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        */
     </script>
 </body>
 </html>

@@ -1,3 +1,15 @@
+
+/*Common*/
+
+/* Style to make the image smaller */
+img.github-logo {
+    width: 15px; /* Adjust the width to your preferred size */
+    height: auto; /* Maintain the aspect ratio */
+}
+
+
+/*------------------------------------------------------------*/
+
 /* Green Theme Styles */
 .green-theme {
     background-color: #3E4E3C;
@@ -68,8 +80,7 @@
 }
 
 .green-theme main {
-    max-width: 800px;
-    min-width: 400px;
+    width: 800px;
     margin: 20px auto;
     background-color: #2D3B29;
     padding: 20px;
@@ -226,9 +237,32 @@ nav ul li:hover ul {
     white-space: pre-wrap;
 }
 
+.green-theme .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.green-theme #prevLink, #nextLink {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.green-theme #prevLink:hover, #nextLink:hover {
+    background-color: #fff;
+    color: #555;
+    text-decoration: none; /* Add underline on hover */
+}
 
 
 /*------------------------------------------------------------*/
+
 
 /* Ligth Theme Styles */
 .light-theme {
@@ -300,8 +334,7 @@ nav ul li:hover ul {
 }
 
 .light-theme main {
-    max-width: 800px;
-    min-width: 400px;
+    width: 800px; /* Adjust the height as needed */
     margin: 20px auto;
     background-color: #ffffff;
     padding: 20px;
@@ -400,12 +433,10 @@ nav ul li:hover ul {
 .light-theme .footer {
     position: bottom;
     bottom: 0;
-    width: 100%;
     background-color: #ffffff; /* Background color for the footer */
     color: #484848; /* Text color for the footer */
     padding: 20px; /* Padding for the footer content */
     text-align: center; /* Center-align footer content */
-    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -458,6 +489,28 @@ nav ul li:hover ul {
     white-space: pre-wrap;
 }
 
+.light-theme .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.light-theme #prevLink, #nextLink {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.light-theme #prevLink:hover, #nextLink:hover {
+    background-color: #fff;
+    color: #555;
+    text-decoration: none; /* Add underline on hover */
+}
 
 
 /*------------------------------------------------------------*/
@@ -532,8 +585,7 @@ nav ul li:hover ul {
 }
 
 .dark-theme main {
-    max-width: 800px;
-    min-width: 400px;
+    width: 800px;
     margin: 20px auto;
     background-color: #222;
     padding: 20px;
@@ -690,6 +742,29 @@ nav ul li:hover ul {
     white-space: pre-wrap;
 }
 
+.dark-theme .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.dark-theme #prevLink, #nextLink {
+    background-color: #fff;
+    color: #555;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.dark-theme #prevLink:hover, #nextLink:hover {
+    background-color: #555;
+    color: #fff;
+    text-decoration: none; /* Add underline on hover */
+}
+
 
 /*------------------------------------------------------------*/
 
@@ -763,8 +838,7 @@ nav ul li:hover ul {
 }
 
 .blue-theme main {
-    max-width: 800px;
-    min-width: 400px;
+    width: 800px;
     margin: 20px auto;
     background-color: #2C3E50;
     padding: 20px;
@@ -920,4 +994,30 @@ nav ul li:hover ul {
 .blue-theme pre {
     white-space: pre-wrap;
 }
+
+.blue-theme .pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.blue-theme #prevLink, #nextLink {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.blue-theme #prevLink:hover, #nextLink:hover {
+    background-color: #fff;
+    color: #555;
+    text-decoration: none; /* Add underline on hover */
+}
+
+
+
 

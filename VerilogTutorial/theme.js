@@ -1,3 +1,16 @@
+// Set the default theme when the page loads
+document.addEventListener("DOMContentLoaded", function () {
+  // Check if a theme is already set in localStorage
+  var storedTheme = localStorage.getItem("selectedTheme");
+  if (storedTheme) {
+    setTheme(storedTheme); // If a theme is stored, apply it
+  } else {
+    setTheme("light"); // If no theme is stored, apply a default theme
+  }
+});
+  
+  // Rest of your theme.js code
+
 // Function to set the theme
 function setTheme(theme) {
     const select = document.getElementById('theme-select');

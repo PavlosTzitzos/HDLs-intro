@@ -459,7 +459,15 @@ Asynchronous logic is crucial when dealing with external events that do not alig
                     </div>
                 </section>
             </section>
+            
+            <section class="pages">
+                <!-- Content of your section goes here -->
+                <a href="../section-2/section-2.html" id="prevLink">Previous</a>
+                <a href="../section-4/section-4.html" id="nextLink">Next</a>
+            </section>
+        </main>
     </div>
+    
     <footer class="footer">
         <!-- Theme Selection Dropdown -->
         <div class="theme-selector">
@@ -473,24 +481,24 @@ Asynchronous logic is crucial when dealing with external events that do not alig
             </select>
         </div>
         <!-- Footer content goes here -->
+        <a href="https://github.com/PavlosTzitzos/Verilog-Code" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Repository" class="github-logo">
+        </a>
+
+        <a href="https://cimi.gr/" target="_blank">CIMI</a>
+
         <p>&copy; 2023 Verilog Tutorial</p>
     </footer>
-</main>
 
-<script src="../theme.js"></script>
-<script src="../navigation.js"></script>
-<script>
-    // JavaScript to toggle subsections on click for navigation panel
-    const sectionTitles = document.querySelectorAll('.section-title');
-
-    sectionTitles.forEach((title) => {
-        title.addEventListener('click', () => {
-            const subsection = title.nextElementSibling;
-            subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
-        });
-    });
-    // JavaScript to show/hide section contents on header click for body
-    const sections = document.querySelectorAll('.collapsible');
+    <script src="../theme.js"></script>
+    <script src="../navigation.js"></script>
+    <!-- Include Prism.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
+    <script src="../copy.js"></script>
+    <script>
+        // JavaScript to show/hide section contents on header click
+        const sections = document.querySelectorAll('.collapsible');
         
         sections.forEach((section) => {
             const header = section.querySelector('.header');
@@ -503,6 +511,35 @@ Asynchronous logic is crucial when dealing with external events that do not alig
                 contents.style.display = contents.style.display === 'none' ? 'block' : 'none';
             });
         });
-</script>
+        // JavaScript to toggle subsections on click
+        const sectionTitles = document.querySelectorAll('.section-title');
+
+        sectionTitles.forEach((title) => {
+            const subsection = title.nextElementSibling;
+            subsection.style.display = 'none'; // Initially hide the subsections
+
+            title.addEventListener('click', () => {
+                subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // Function to open the GitHub link in a new tab
+        function openGitHubLink(gitHubLink) {
+            window.open(gitHubLink, '_blank');
+        }
+        /*
+        // Function to trigger the download of a GitHub file
+        function downloadGitHubFile(gitHubLink) {
+            // Create an anchor element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = gitHubLink;
+            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        */
+    </script>
 </body>
 </html>

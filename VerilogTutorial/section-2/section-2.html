@@ -147,49 +147,51 @@
                     </div>
                     <!-- Content for section 2.2 -->
                     <div class="contents">
-                        Simulation is a crucial step in the Verilog design process, allowing you to test and verify your hardware designs before physical implementation. If you're just getting started with Verilog and want to use free simulation tools, the following options are available: 
+                        <p>
+                            Simulation is a crucial step in the Verilog design process, allowing you to test and verify your hardware designs before physical implementation. If you're just getting started with Verilog and want to use free simulation tools, the following options are available: 
+                        </p>
+                        <ul>
+                            1. Icarus Verilog (iverilog):
+                            <ul>
+                                <li>Platform: Windows, macOS, Linux </li>
 
-1. Icarus Verilog (iverilog): 
-
-Platform: Windows, macOS, Linux 
-
-Features: 
-
-Open-source Verilog simulator that supports a subset of Verilog 2005. 
-
-Suitable for small to medium-sized projects and educational purposes. 
-
-Includes a command-line interface for simulation and waveform viewing. 
-
-Setup: Download and install Icarus Verilog from the official website or use package managers like apt (Linux) or Homebrew (macOS). 
-
-2. ModelSim - Intel FPGA Starter Edition: 
-
-Platform: Windows, Linux (limited macOS support) 
-
-Features: 
-
-Although ModelSim - Intel FPGA Starter Edition is primarily a paid tool, it offers a free version with some limitations. 
-
-Provides a robust simulation environment for Verilog and SystemVerilog. 
-
-Suitable for both beginners and experienced designers. 
-
-Setup: Download and install ModelSim - Intel FPGA Starter Edition from the Intel website. Note that you may need to register for a free license. 
-
-3. EDA Playground: 
-
-Platform: Web-based (no installation required) 
-
-Features: 
-
-A cloud-based Verilog simulator that allows you to write, simulate, and share Verilog code in your web browser. 
-
-Great for quick Verilog experimentation without any setup. 
-
-Usage: Visit the EDA Playground website, create an account (if needed), and start writing and simulating Verilog code directly in your browser. 
-
-These free simulation tools provide excellent options for learning and experimenting with Verilog. Icarus Verilog is particularly well-suited for educational purposes and smaller projects, while ModelSim - Intel FPGA Starter Edition offers more advanced features, even in its free version. 
+                                <li>Features: 
+                                    <ul>
+                                        <li>Open-source Verilog simulator that supports a subset of Verilog 2005. </li>
+                                        <li>Suitable for small to medium-sized projects and educational purposes. </li>
+                                        <li>Includes a command-line interface for simulation and waveform viewing. </li>
+                                    </ul>
+                                </li>
+                                <li>Setup: Download and install Icarus Verilog from the official website or use package managers like apt (Linux) or Homebrew (macOS). </li>
+                            </ul>
+                            2. ModelSim - Intel FPGA Starter Edition: 
+                            <ul>
+                                <li>Platform: Windows, Linux (limited macOS support) </li>
+                                <li>Features: 
+                                    <ul>
+                                        <li>Although ModelSim - Intel FPGA Starter Edition is primarily a paid tool, it offers a free version with some limitations. </li>
+                                        <li>Provides a robust simulation environment for Verilog and SystemVerilog. </li>
+                                        <li>Suitable for both beginners and experienced designers. </li>
+                                    </ul>
+                                </li>
+                                <li>Setup: Download and install ModelSim - Intel FPGA Starter Edition from the Intel website. Note that you may need to register for a free license. </li>
+                            </ul>
+                            
+                            3. EDA Playground: 
+                            <ul>
+                                <li>Platform: Web-based (no installation required) </li>
+                                <li>Features: 
+                                    <ul>
+                                        <li>A cloud-based Verilog simulator that allows you to write, simulate, and share Verilog code in your web browser. </li>
+                                        <li>Great for quick Verilog experimentation without any setup. </li>
+                                        <li>Usage: Visit the EDA Playground website, create an account (if needed), and start writing and simulating Verilog code directly in your browser. </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </ul>
+                        <p>
+                            These free simulation tools provide excellent options for learning and experimenting with Verilog. Icarus Verilog is particularly well-suited for educational purposes and smaller projects, while ModelSim - Intel FPGA Starter Edition offers more advanced features, even in its free version. 
+                        </p>
                     </div>
                 </section>
 
@@ -199,118 +201,90 @@ These free simulation tools provide excellent options for learning and experimen
                     </div>
                     <!-- Content for section 2.3 -->
                     <div class="contents">
-                        To get you started with Verilog on different operating systems, we'll provide basic "Hello World" style examples for writing, compiling, and simulating Verilog code. You'll find instructions for Windows, macOS, and Linux below: 
+                        <p>
+                            To get you started with Verilog on different operating systems, we'll provide basic "Hello World" style examples for writing, compiling, and simulating Verilog code. You'll find instructions for Windows, macOS, and Linux below: 
+                        </p>
+                        <p>
+                            Writing Verilog Code: 
 
-Windows: 
+                            <p>
+                                Open your preferred text editor (e.g., Notepad++, Visual Studio Code). 
 
-Writing Verilog Code: 
+                                Write a simple Verilog module, such as an AND gate: 
 
-Open your preferred text editor (e.g., Notepad++, Visual Studio Code). 
+                                <div class="code-box">
+                                    <div class="code-header">
+                                        <span class="filename">and_gate.v</span>
+                                        <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                        <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                        <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                        <button class="copy-button" data-code-id="code-1">Copy</button>
+                                    </div>
+                                    <pre><code class="language-verilog" id="code-1">
+// Code block 1
+module and_gate (
+    input wire A,
+    input wire B,
+    output wire Y
+);
+    assign Y = A & B;
+endmodule
+                                    </code></pre>
+                                </div>
+                                Save the file with a “.v” extension, e.g., and_gate.v. Is good to name the file with the same name the module has. 
+                            </p>
+                        </p>
+                        For Windows , Linux or Mac users : 
+                        <p>
+                            Compiling and Simulating with Icarus Verilog: 
 
-Write a simple Verilog module, such as an AND gate: 
+                            Open Command Prompt. 
 
-module and_gate ( 
-    input A, 
-    input B, 
-    output Y 
-); 
-    assign Y = A & B; 
-endmodule 
- 
+                            Navigate to the directory where your Verilog file is located using the cd command. 
 
-Save the file with a “.v” extension, e.g., and_gate.v. Is good to name the file with the same name the module has. 
+                            Compile your Verilog code using Icarus Verilog: 
 
-Compiling and Simulating with Icarus Verilog: 
-
-Open Command Prompt. 
-
-Navigate to the directory where your Verilog file is located using the cd command. 
-
-Compile your Verilog code using Icarus Verilog: 
-
-Copy code 
-
+                            <div class="code-box">
+                                <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-2">Copy</button>
+                                </div>
+                                <pre><code class="language-cmd" id="code-2">
 iverilog -o and_gate_tb and_gate.v 
- 
+                            </code> </pre>
+                            </div>
+                            This command compiles your code and creates an executable file named and_gate_tb. 
 
-This command compiles your code and creates an executable file named and_gate_tb. 
+                            Simulate the compiled code: 
 
-Simulate the compiled code: 
-
-Copy code 
-
+                            <div class="code-box">
+                                <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-3">Copy</button>
+                                </div>
+                                <pre><code class="language-cmd" id="code-3">
 vvp and_gate_tb 
- 
-
-You'll see the simulation results in the console. 
-
-macOS: 
-
-Writing Verilog Code: 
-
-Open a text editor such as Visual Studio Code or any text editor of your choice. 
-
-Write your Verilog module, for example, an AND gate, as shown in the Windows example above. 
-
-Save the file with a .v extension, e.g., and_gate.v. 
-
-Compiling and Simulating with Icarus Verilog: 
-
-Open Terminal. 
-
-Navigate to the directory where your Verilog file is located using the cd command. 
-
-Compile your Verilog code with Icarus Verilog: 
-
-Copy code 
-
-iverilog -o and_gate_tb and_gate.v 
- 
-
-Simulate the compiled code: 
-
-Copy code 
-
-vvp and_gate_tb 
- 
-
-The simulation results will be displayed in the Terminal. 
-
-Linux: 
-
-Writing Verilog Code: 
-
-Launch your preferred text editor in Linux, such as Gedit, Visual Studio Code, or any other editor of your choice. 
-
-Write your Verilog module, for instance, an AND gate, similar to the previous examples. 
-
-Save the file with a .v extension, e.g., and_gate.v. 
-
-Compiling and Simulating with Icarus Verilog: 
-
-Open a Terminal window. 
-
-Navigate to the directory where your Verilog file is located using the cd command. 
-
-Compile your Verilog code with Icarus Verilog: 
-
-Copy code 
-
-iverilog -o and_gate_tb and_gate.v 
- 
-
-Simulate the compiled code: 
-
-Copy code 
-
-vvp and_gate_tb 
- 
-
-You'll see the simulation results in the Terminal. 
-
-These basic examples should help you get started with Verilog on Windows, macOS, and Linux. You can replace the Verilog module in the examples with your own designs as you progress in your Verilog learning journey. 
+                                </code> </pre>
+                            </div>
+                            You'll see the simulation results in the console. 
+                        </p>
+                    <p>
+                        These basic examples should help you get started with Verilog on Windows, macOS, and Linux. You can replace the Verilog module in the examples with your own designs as you progress in your Verilog learning journey. 
+                    </p>
                     </div>
                 </section>
+            </section>
+
+            <section class="pages">
+                <!-- Content of your section goes here -->
+                <a href="../section-1/section-1.html" id="prevLink">Previous</a>
+                <a href="../section-3/section-3.html" id="nextLink">Next</a>
             </section>
         </main>
     </div>
@@ -327,6 +301,12 @@ These basic examples should help you get started with Verilog on Windows, macOS,
             </select>
         </div>
         <!-- Footer content goes here -->
+        <a href="https://github.com/PavlosTzitzos/Verilog-Code" target="_blank">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Repository" class="github-logo">
+        </a>
+
+        <a href="https://cimi.gr/" target="_blank">CIMI</a>
+
         <p>&copy; 2023 Verilog Tutorial</p>
     </footer>
 
@@ -355,11 +335,31 @@ These basic examples should help you get started with Verilog on Windows, macOS,
         const sectionTitles = document.querySelectorAll('.section-title');
 
         sectionTitles.forEach((title) => {
+            const subsection = title.nextElementSibling;
+            subsection.style.display = 'none'; // Initially hide the subsections
+
             title.addEventListener('click', () => {
-                const subsection = title.nextElementSibling;
                 subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
             });
         });
+
+        // Function to open the GitHub link in a new tab
+        function openGitHubLink(gitHubLink) {
+            window.open(gitHubLink, '_blank');
+        }
+        /*
+        // Function to trigger the download of a GitHub file
+        function downloadGitHubFile(gitHubLink) {
+            // Create an anchor element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = gitHubLink;
+            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        */
     </script>
 </body>
 </html>

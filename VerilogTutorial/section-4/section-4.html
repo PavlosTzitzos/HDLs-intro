@@ -6,13 +6,13 @@
     <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="../theme.css">
 </head>
 <body>
-    <header>
-        <h1>Verilog Tutorial</h1>
-        <h2>Section 4: Examples with Testbenches</h2>
-    </header>
+   <header>
+      <h1>Verilog Tutorial</h1>
+      <h2>Section 4: Examples with Testbenches</h2>
+   </header>
 
-    <div class="wrapper">
-        <nav class="sticky">
+   <div class="wrapper">
+      <nav class="sticky">
             <ul>
                 <li>
                     <span class="section-title">Section 1: Introduction</span>
@@ -52,8 +52,8 @@
                     </ul>
                 </li>
             </ul>
-        </nav>
-        <main>
+      </nav>
+      <main>
             <section id="section-4">
                 <section id="section-4-1" class="collapsible">
                     <div class="header">
@@ -1641,38 +1641,45 @@ This testbench provides a basic scenario where data is written to and read from 
                     </div>
                 </section>
             </section>
-    </div>
-    <footer class="footer">
-        <!-- Theme Selection Dropdown -->
-        <div class="theme-selector">
+            
+            <section class="pages">
+               <!-- Content of your section goes here -->
+               <a href="../section-3/section-3.html" id="prevLink">Previous</a>
+               <a href="../index.html" id="nextLink">Back to Start</a>
+           </section>
+      </main>
+   </div>
+   <footer class="footer">
+      <!-- Theme Selection Dropdown -->
+      <div class="theme-selector">
             <label for="theme-select">Theme:</label>
             <select id="theme-select">
-                <option value="light">Light</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
-                <option value="dark">Dark</option>
-                <!-- Add more theme options as needed -->
+               <option value="light">Light</option>
+               <option value="green">Green</option>
+               <option value="blue">Blue</option>
+               <option value="dark">Dark</option>
+               <!-- Add more theme options as needed -->
             </select>
-        </div>
-        <!-- Footer content goes here -->
-        <p>&copy; 2023 Verilog Tutorial</p>
-    </footer>
-</main>
+      </div>
+      <!-- Footer content goes here -->
+      <a href="https://github.com/PavlosTzitzos/Verilog-Code" target="_blank">
+         <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub Repository" class="github-logo">
+     </a>
 
-<script src="../theme.js"></script>
-<script src="../navigation.js"></script>
-<script>
-    // JavaScript to toggle subsections on click for navigation panel
-    const sectionTitles = document.querySelectorAll('.section-title');
+     <a href="https://cimi.gr/" target="_blank">CIMI</a>
 
-    sectionTitles.forEach((title) => {
-        title.addEventListener('click', () => {
-            const subsection = title.nextElementSibling;
-            subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
-        });
-    });
-    // JavaScript to show/hide section contents on header click for body
-    const sections = document.querySelectorAll('.collapsible');
+      <p>&copy; 2023 Verilog Tutorial</p>
+   </footer>
+
+   <script src="../theme.js"></script>
+    <script src="../navigation.js"></script>
+    <!-- Include Prism.js script for syntax highlighting -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
+    <script src="../copy.js"></script>
+    <script>
+        // JavaScript to show/hide section contents on header click
+        const sections = document.querySelectorAll('.collapsible');
         
         sections.forEach((section) => {
             const header = section.querySelector('.header');
@@ -1685,6 +1692,35 @@ This testbench provides a basic scenario where data is written to and read from 
                 contents.style.display = contents.style.display === 'none' ? 'block' : 'none';
             });
         });
-</script>
+        // JavaScript to toggle subsections on click
+        const sectionTitles = document.querySelectorAll('.section-title');
+
+        sectionTitles.forEach((title) => {
+            const subsection = title.nextElementSibling;
+            subsection.style.display = 'none'; // Initially hide the subsections
+
+            title.addEventListener('click', () => {
+                subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+
+        // Function to open the GitHub link in a new tab
+        function openGitHubLink(gitHubLink) {
+            window.open(gitHubLink, '_blank');
+        }
+        /*
+        // Function to trigger the download of a GitHub file
+        function downloadGitHubFile(gitHubLink) {
+            // Create an anchor element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = gitHubLink;
+            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        */
+    </script>
 </body>
 </html>
