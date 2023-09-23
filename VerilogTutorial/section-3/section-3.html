@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Verilog Tutorial</h1>
+        <a href="../index.html">Verilog Tutorial</a>
         <h2>Section 3: Basics of Digital Design</h2>
     </header>
 
@@ -93,41 +93,67 @@
                     </div>
                     <!-- Content for section 3.2 -->
                     <div class="contents">
-                        Before diving deeper into Verilog design, it's essential to understand some fundamental keywords and data structures. In this section, we'll explore key Verilog concepts and provide examples to illustrate their usage. 
+                        <p>
+                            Before diving deeper into Verilog design, it's essential to understand some fundamental keywords and data structures. In this section, we'll explore key Verilog concepts and provide examples to illustrate their usage. 
+                        </p>
+                        <ol>
+                            <li>
+                                <i>module</i>:
+                                <p>
+                                    module is a fundamental keyword in Verilog used to define hardware modules or blocks. 
+                                    Modules encapsulate specific functionality or components of a design. 
+                                    Example:
+                                    <div class="code-box">
+                                        <div class="code-header">
+                                            <span class="filename">and_gate.v</span>
+                                            <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                            <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                            <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                            <button class="copy-button" data-code-id="code-1">Copy</button>
+                                        </div>
+                                        <pre><code class="language-verilog" id="code-1">
+// Code block 1
+module and_gate (
+    input wire A,
+    input wire B,
+    output wire Y
+);
+    assign Y = A & B;
+endmodule
+                                        </code></pre>
+                                    </div>
+                                </p>
+                            </li>
+                            <li>
+                                <i>input</i> and <i>output</i>:
+                                <p>
+                                    input and output are used to declare ports in a Verilog module. 
 
-1. module: 
-
-module is a fundamental keyword in Verilog used to define hardware modules or blocks. 
-
-Modules encapsulate specific functionality or components of a design. 
-
-Example: 
-
-module and_gate ( 
-    input A, 
-    input B, 
-    output Y 
-); 
-    assign Y = A & B; 
-endmodule 
- 
-
-2. input and output: 
-
-input and output are used to declare ports in a Verilog module. 
-
-input ports receive signals from external sources, while output ports transmit signals to other modules. 
-
-Example: 
-
-module and_gate ( 
-    input A, 
-    input B, 
-    output Y 
-); 
-    assign Y = A & B; 
-endmodule 
- 
+                                    input ports receive signals from external sources, while output ports transmit signals to other modules. 
+                                    
+                                    Example: 
+                                    <div class="code-box">
+                                        <div class="code-header">
+                                            <span class="filename">or_gate.v</span>
+                                            <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                            <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                            <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                            <button class="copy-button" data-code-id="code-2">Copy</button>
+                                        </div>
+                                        <pre><code class="language-verilog" id="code-2">
+// Code block 2
+module or_gate (
+    input wire A,
+    input wire B,
+    output wire Y
+);
+    assign Y = A | B;
+endmodule
+                                        </code></pre>
+                                    </div>
+                                </p>
+                            </li>
+                        </ol>
 
 3. assign: 
 

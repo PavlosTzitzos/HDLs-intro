@@ -347,7 +347,7 @@ nav ul li:hover ul {
 }
 
 .light-theme h1 a {
-    background-color: #ffffff;
+    background-color: #fff;
     color: #000;
     text-decoration: none;
 }
@@ -393,6 +393,14 @@ nav ul li:hover ul {
 
 .light-theme .collapsible .header:hover {
     text-decoration: underline;
+}
+
+.ligth-theme .collapsible .contents ul li a {
+    color:#484848;
+}
+
+.ligth-theme .collapsible .contents ul li a:hover {
+    color:#000;
 }
 
 /* Style for the sticky navigation */
