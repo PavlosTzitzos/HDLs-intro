@@ -64,6 +64,9 @@
                 <div class="code-box">
                     <div class="code-header">
                         <span class="filename">and_gate.v</span>
+                        <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                        <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                        <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
                         <button class="copy-button" data-code-id="code-1">Copy</button>
                     </div>
                     <pre><code class="language-verilog" id="code-1">
@@ -107,6 +110,7 @@ endmodule
             <select id="theme-select" >
                 <option value="light">Light</option>
                 <option value="green">Green</option>
+                <option value="blue">Blue</option>
                 <option value="dark">Dark</option>
                 <!-- Add more theme options as needed -->
             </select>
@@ -144,6 +148,25 @@ endmodule
                 subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
             });
         });
+
+
+        // Function to open the GitHub link in a new tab
+        function openGitHubLink(gitHubLink) {
+            window.open(gitHubLink, '_blank');
+        }
+        /*
+        // Function to trigger the download of a GitHub file
+        function downloadGitHubFile(gitHubLink) {
+            // Create an anchor element to trigger the download
+            var downloadLink = document.createElement('a');
+            downloadLink.href = gitHubLink;
+            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+            downloadLink.style.display = 'none';
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+        }
+        */
     </script>
 </body>
 </html>

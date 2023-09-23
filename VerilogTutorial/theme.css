@@ -1,7 +1,7 @@
 /* Green Theme Styles */
 .green-theme {
-    background-color: #fff;
-    color: #484848;
+    background-color: #3E4E3C;
+    color: #fff;
 }
 
 .green-theme .wrapper {
@@ -9,16 +9,16 @@
 }
 
 .green-theme header {
-    background-color: #99d1ab;
-    color: #000;
+    background-color: #2D3B29;
+    color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .green-theme nav {
-    background-color: #99d1ab;
-    color: #484848;
+    background-color: #2D3B29;
+    color: #fff;
     flex-basis: 350px; /* Set the width of the navigation */
     max-width: 350px;
     min-width: 100px;
@@ -38,7 +38,7 @@
 }
 
 .green-theme nav ul li a {
-    color: #484848;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 20px;
@@ -57,7 +57,7 @@
 
 .green-theme nav ul ul li a {
     /*background-color: #ffffff;*/
-    color: #484848;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 5px 0;
@@ -71,7 +71,7 @@
     max-width: 800px;
     min-width: 400px;
     margin: 20px auto;
-    background-color: #99d1ab;
+    background-color: #2D3B29;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -82,8 +82,8 @@
 }
 
 .green-theme h1 a {
-    background-color: #99d1ab;
-    color: #000;
+    background-color: #2D3B29;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -109,7 +109,7 @@ nav ul li:hover ul {
 
 .green-theme main section h2 {
     cursor: pointer;
-    color: #000;
+    color: #fff;
 }
 
 .green-theme main section h2:hover {
@@ -123,7 +123,7 @@ nav ul li:hover ul {
 
 .green-theme .collapsible .header {
     cursor: pointer;
-    color: #0077cc;
+    color: #fff;
 }
 
 .green-theme .collapsible .header:hover {
@@ -133,8 +133,8 @@ nav ul li:hover ul {
 /* Style for the sticky navigation */
 .green-theme .sticky {
     top: 0;
-    background-color: #99d1ab; /* Background color for the navigation */
-    color: #484848; /* Text color for the navigation */
+    background-color: #2D3B29; /* Background color for the navigation */
+    color: #fff; /* Text color for the navigation */
     padding: 10px; /* Padding around the navigation links */
     z-index: 100; /* Ensure the navigation appears above content */
 }
@@ -152,7 +152,7 @@ nav ul li:hover ul {
 }
 
 .green-theme .sticky ul li a {
-    color: #484848;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 5px 15px;
@@ -161,16 +161,16 @@ nav ul li:hover ul {
 
 /* Style for navigation links on hover */
 .green-theme .sticky ul li a:hover {
-    background-color: #0077cc;
-    color: #ffffff;
+    background-color: #fff;
+    color: #2D3B29;
 }
 /* CSS styles for the footer */
 .green-theme .footer {
     position: bottom;
     bottom: 0;
     width: 100%;
-    background-color: #99d1ab; /* Background color for the footer */
-    color: #484848; /* Text color for the footer */
+    background-color: #2D3B29; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
     padding: 20px; /* Padding for the footer content */
     text-align: center; /* Center-align footer content */
     border-radius: 10px;
@@ -179,7 +179,7 @@ nav ul li:hover ul {
 
 /* Style for links within the footer (if needed) */
 .green-theme .footer a {
-    color: #484848; /* Text color for links in the footer */
+    color: #fff; /* Text color for links in the footer */
     text-decoration: none; /* Remove underline from links */
 }
 
@@ -464,8 +464,8 @@ nav ul li:hover ul {
 
 /* Dark Theme Styles */
 .dark-theme {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #333;
+    color: #fff;
 }
 
 .dark-theme .wrapper {
@@ -473,16 +473,16 @@ nav ul li:hover ul {
 }
 
 .dark-theme header {
-    background-color: #484848;
-    color: #ffffff;
+    background-color: #222;
+    color: #fff;
     padding: 20px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .dark-theme nav {
-    background-color: #ffffff;
-    color: #484848;
+    background-color: #222;
+    color: #fff;
     flex-basis: 350px; /* Set the width of the navigation */
     max-width: 350px;
     min-width: 100px;
@@ -502,7 +502,7 @@ nav ul li:hover ul {
 }
 
 .dark-theme nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 20px;
@@ -520,8 +520,8 @@ nav ul li:hover ul {
 }
 
 .dark-theme nav ul ul li a {
-    background-color: #484848;
-    color: #ffffff;
+    background-color: #222;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 5px 0;
@@ -535,7 +535,7 @@ nav ul li:hover ul {
     max-width: 800px;
     min-width: 400px;
     margin: 20px auto;
-    background-color: #484848;
+    background-color: #222;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -546,8 +546,8 @@ nav ul li:hover ul {
 }
 
 .dark-theme h1 a {
-    background-color: #484848;
-    color: #ffffff;
+    background-color: #222;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -573,7 +573,7 @@ nav ul li:hover ul {
 
 .dark-theme main section h2 {
     cursor: pointer;
-    color: #0077cc;
+    color: #fff;
 }
 
 .dark-theme main section h2:hover {
@@ -587,7 +587,7 @@ nav ul li:hover ul {
 
 .dark-theme .collapsible .header {
     cursor: pointer;
-    color: #0077cc;
+    color: #fff;
 }
 
 .dark-theme .collapsible .header:hover {
@@ -597,8 +597,8 @@ nav ul li:hover ul {
 /* Style for the sticky navigation */
 .dark-theme .sticky {
     top: 0;
-    background-color: #484848; /* Background color for the navigation */
-    color: #ffffff; /* Text color for the navigation */
+    background-color: #222; /* Background color for the navigation */
+    color: #fff; /* Text color for the navigation */
     padding: 10px; /* Padding around the navigation links */
     z-index: 100; /* Ensure the navigation appears above content */
 }
@@ -616,7 +616,7 @@ nav ul li:hover ul {
 }
 
 .dark-theme .sticky ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     display: block;
     padding: 5px 15px;
@@ -625,16 +625,16 @@ nav ul li:hover ul {
 
 /* Style for navigation links on hover */
 .dark-theme .sticky ul li a:hover {
-    background-color: #0077cc;
-    color: #484848;
+    background-color: #fff;
+    color: #222;
 }
 /* CSS styles for the footer */
 .dark-theme .footer {
     position: bottom;
     bottom: 0;
     width: 100%;
-    background-color: #484848; /* Background color for the footer */
-    color: #ffffff; /* Text color for the footer */
+    background-color: #222; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
     padding: 20px; /* Padding for the footer content */
     text-align: center; /* Center-align footer content */
     border-radius: 10px;
@@ -689,3 +689,235 @@ nav ul li:hover ul {
 .dark-theme pre {
     white-space: pre-wrap;
 }
+
+
+/*------------------------------------------------------------*/
+
+/* Blue Theme Styles */
+.blue-theme {
+    background-color: #34495E;
+    color: #fff;
+}
+
+.blue-theme .wrapper {
+    display: flex;
+}
+
+.blue-theme header {
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blue-theme nav {
+    background-color: #2C3E50;
+    color: #fff;
+    flex-basis: 350px; /* Set the width of the navigation */
+    max-width: 350px;
+    min-width: 100px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blue-theme nav ul {
+    list-style: none;
+    padding: 20px;
+}
+
+.blue-theme nav ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.blue-theme nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 20px;
+}
+/* Style for collapsible subsections */
+.blue-theme nav ul ul {
+    display: none;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.blue-theme nav ul ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.blue-theme nav ul ul li a {
+    /*background-color: #ffffff;*/
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+}
+/* Style for collapsed subsections in navigation */
+.blue-theme nav ul ul.collapsed {
+    display: none;
+}
+
+.blue-theme main {
+    max-width: 800px;
+    min-width: 400px;
+    margin: 20px auto;
+    background-color: #2C3E50;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blue-theme h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.blue-theme h1 a {
+    background-color: #2C3E50;
+    color: #fff;
+    text-decoration: none;
+}
+
+.blue-theme h2 {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.blue-theme p {
+    margin-bottom: 20px;
+}
+
+/* Show subsections when parent list item is hovered */
+/*
+nav ul li:hover ul {
+    display: block;
+}
+*/
+/* Style for collapsed sections in <main> */
+.blue-theme main section.collapsed {
+    display: none;
+}
+
+.blue-theme main section h2 {
+    cursor: pointer;
+    color: #fff;
+}
+
+.blue-theme main section h2:hover {
+    text-decoration: underline;
+}
+
+/* Style for collapsed section contents */
+.blue-theme .collapsed {
+    display: none;
+}
+
+.blue-theme .collapsible .header {
+    cursor: pointer;
+    color: #fff;
+}
+
+.blue-theme .collapsible .header:hover {
+    text-decoration: underline;
+}
+
+/* Style for the sticky navigation */
+.blue-theme .sticky {
+    top: 0;
+    background-color: #2C3E50; /* Background color for the navigation */
+    color: #fff; /* Text color for the navigation */
+    padding: 10px; /* Padding around the navigation links */
+    z-index: 100; /* Ensure the navigation appears above content */
+}
+
+/* Style for navigation links */
+.blue-theme .sticky ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.blue-theme .sticky ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.blue-theme .sticky ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 15px;
+    transition: background-color 0.2s;
+}
+
+/* Style for navigation links on hover */
+.blue-theme .sticky ul li a:hover {
+    background-color: #fff;
+    color: #2C3E50;
+}
+/* CSS styles for the footer */
+.blue-theme .footer {
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+    background-color: #2C3E50; /* Background color for the footer */
+    color: #fff; /* Text color for the footer */
+    padding: 20px; /* Padding for the footer content */
+    text-align: center; /* Center-align footer content */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for links within the footer (if needed) */
+.blue-theme .footer a {
+    color: #fff; /* Text color for links in the footer */
+    text-decoration: none; /* Remove underline from links */
+}
+
+/* Style for links on hover (if needed) */
+.blue-theme .footer a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+/* Style for the code box container */
+.blue-theme .code-box {
+    border: 1px solid #2C3E50;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #ffffff;
+}
+
+/* Style for the code header (filename and copy button) */
+.blue-theme .code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2C3E50;
+    color: #fff;
+    padding: 5px;
+}
+
+/* Style for the filename */
+.blue-theme .filename {
+    font-weight: bold;
+}
+
+/* Style for the copy button */
+.blue-theme .copy-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Style for the code block */
+.blue-theme pre {
+    white-space: pre-wrap;
+}
+
