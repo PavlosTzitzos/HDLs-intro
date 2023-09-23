@@ -1,9 +1,14 @@
 A folder with verilog only code.
 
-Intro Folder contains beginner-level examples.
+Folder Structure :
 
-To begin with use Icarus Verilog for Verilog (.v) files.
+section-1
 
-language keywords summary:
+section-2
 
+section-3
+
+section-4
+
+section-5
 
