@@ -357,6 +357,15 @@ nav ul li:hover ul {
     margin-top: 20px;
 }
 
+.light-theme h3 {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.light-theme h4 {
+    margin-top: 20px;
+}
+
 .light-theme p {
     margin-bottom: 20px;
 }
@@ -400,6 +409,14 @@ nav ul li:hover ul {
 }
 
 .ligth-theme .collapsible .contents ul li a:hover {
+    color:#000;
+}
+
+.ligth-theme .collapsible .contents ol li a {
+    color:#484848;
+}
+
+.ligth-theme .collapsible .contents ol li a:hover {
     color:#000;
 }
 

@@ -41,8 +41,8 @@
                         <li><a href="../section-3/section-3.html">3.1 Verilog Resources</a></li>
                         <li><a href="../section-3/section-3.html">3.2 Verilog Syntax</a></li>
                         <li><a href="../section-3/section-3.html">3.3 Combinational Logic</a></li>
-                        <li><a href="../section-3/section-3.html">3.4 Synchronous Logic</a></li>
-                        <li><a href="../section-3/section-3.html">3.5 Aynchronous Logic</a></li>
+                        <li><a href="../section-3/section-3.html">3.4 Synchronous Sequential Logic</a></li>
+                        <li><a href="../section-3/section-3.html">3.5 Aynchronous Sequential Logic</a></li>
                     </ul>
                 </li>
                 <li>
@@ -50,7 +50,7 @@
                     <ul class="subsection">
                         <li><a href="../section-4/section-4.html">4.1 Verification and Testbenches</a></li>
                         <li><a href="../section-4/section-4.html">4.2 Examples for Combinational Logic</a></li>
-                        <li><a href="../section-4/section-4.html">4.3 Examples for Asynchronous Logic</a></li>
+                        <li><a href="../section-4/section-4.html">4.3 Examples for Synchronous Logic</a></li>
                     </ul>
                 </li>
             </ul>
@@ -64,35 +64,46 @@
                 <!-- Content for section 1.1 -->
                 <div class="contents">
                     <p>In the realm of digital electronics and hardware design, precision, accuracy, and reliability are paramount. This is where Verilog steps in as a crucial tool. But why do we need Verilog in the first place? </p>
-                    <ul>
-                        1. Design Complexity:
-                        <p>
-                            Hardware designs have become increasingly complex over the years. From microprocessors to custom integrated circuits, modern electronics require intricate designs. Verilog provides a systematic and efficient way to model and describe this complexity. 
-                        </p>
-                        2. Simulation and Verification:
-                        <p>
-                            Before hardware is physically manufactured, it must be thoroughly tested and verified. Verilog allows engineers to simulate the behaviour of their designs, identifying and rectifying issues early in the design process, saving time and resources. 
-                        </p>
-                        3. Reusability: 
-                        <p>
-                            Verilog promotes the creation of reusable hardware modules. These modules can be easily integrated into larger designs, reducing redundancy and accelerating development. 
-                        </p>
-                        4. Flexibility and Adaptability: 
-                        <p>
-                            Electronics are constantly evolving. Verilog's adaptability allows designers to make changes and updates to their designs efficiently, keeping pace with technological advancements. 
-                        </p>
-                        5. FPGA and ASIC Development: 
-                        <p>
-                            Verilog is a cornerstone in the development of Field-Programmable Gate Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs). These technologies have wide-ranging applications, from consumer electronics to aerospace. 
-                        </p>
-                        6. Industry Standard: 
-                        <p>
-                            Verilog has emerged as an industry standard for hardware description. Professionals in the field are expected to have proficiency in Verilog due to its widespread use. 
-                        </p>
-                    </ul>
-                        <p>
-                            In summary, Verilog is an indispensable language that addresses the increasing complexity of hardware design. It empowers engineers and designers to create, simulate, and verify intricate electronic systems efficiently, making it a fundamental tool in the world of digital hardware design.
-                        </p>
+                    <ol>
+                        <li>
+                            <h3>Design Complexity:</h3>
+                            <p>
+                                Hardware designs have become increasingly complex over the years. From microprocessors to custom integrated circuits, modern electronics require intricate designs. Verilog provides a systematic and efficient way to model and describe this complexity. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Simulation and Verification:</h3>
+                            <p>
+                                Before hardware is physically manufactured, it must be thoroughly tested and verified. Verilog allows engineers to simulate the behaviour of their designs, identifying and rectifying issues early in the design process, saving time and resources. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Reusability:</h3>
+                            <p>
+                                Verilog promotes the creation of reusable hardware modules. These modules can be easily integrated into larger designs, reducing redundancy and accelerating development. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Flexibility and Adaptability:</h3>
+                            <p>
+                                Electronics are constantly evolving. Verilog's adaptability allows designers to make changes and updates to their designs efficiently, keeping pace with technological advancements. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>FPGA and ASIC Development: </h3>
+                            <p>
+                                Verilog is a cornerstone in the development of Field-Programmable Gate Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs). These technologies have wide-ranging applications, from consumer electronics to aerospace. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Industry Standard: </h3>
+                            <p>
+                                Verilog has emerged as an industry standard for hardware description. Professionals in the field are expected to have proficiency in Verilog due to its widespread use. 
+                            </p>
+                        </li>
+                    </ol>
+                    <p>
+                        In summary, Verilog is an indispensable language that addresses the increasing complexity of hardware design. It empowers engineers and designers to create, simulate, and verify intricate electronic systems efficiently, making it a fundamental tool in the world of digital hardware design.
                     </p>
                 </div>
             </section>
@@ -106,32 +117,44 @@
                     <p>
                         Verilog is a specialized computer language designed for the precise description and modeling of digital hardware systems. It serves as a critical bridge between abstract hardware concepts and their practical implementation. Let's delve deeper into what Verilog is and its significance: 
                     </p>
-                    <ul>
-                        1. Hardware Description Language (HDL): 
-                        <p>
-                            At its core, Verilog is a Hardware Description Language (HDL). HDLs are used to specify the behavior and structure of digital circuits and systems. Verilog excels in describing not only the functionality but also the timing and hierarchical organization of hardware components. 
-                        </p>
-                        2. Behavioral and Structural Modeling: 
-                        <p>
-                            Verilog allows for both behavioral and structural modeling. Engineers can describe how a hardware component behaves (functional abstraction) and how it's physically structured (structural abstraction). This versatility is invaluable in hardware design. 
-                        </p>
-                        3. Simulation and Synthesis: 
-                        <p>
-                            Verilog plays a dual role in the design process. It enables simulation, where designers can test and validate their designs in a virtual environment. Additionally, Verilog is used in synthesis tools, which convert high-level descriptions into low-level gate-level representations that can be implemented in hardware. 
-                        </p>
-                        4. Event-Driven Execution: 
-                        <p>
-                            Verilog operates on an event-driven model, where changes in signal values trigger the execution of specific blocks of code. This makes it well-suited for modeling synchronous digital systems, where actions occur in response to clock edges. 
-                        </p>
-                        5. Hierarchy and Modularity: 
-                        <p>
-                            Hardware designs can quickly become complex. Verilog encourages a hierarchical and modular approach, where large systems are built from smaller, reusable components. This promotes clarity, reusability, and maintainability. 
-                        </p>
-                        6. Industry Adoption: 
-                        <p>
-                            Verilog has gained widespread acceptance and is commonly used in both academia and industry. Its standardization ensures compatibility across various tools and platforms. 
-                        </p>
-                    </ul>
+                    <ol>
+                        <li>
+                            <h3>Hardware Description Language (HDL): </h3>
+                            <p>
+                                At its core, Verilog is a Hardware Description Language (HDL). HDLs are used to specify the behavior and structure of digital circuits and systems. Verilog excels in describing not only the functionality but also the timing and hierarchical organization of hardware components. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Behavioral and Structural Modeling: </h3>
+                            <p>
+                                Verilog allows for both behavioral and structural modeling. Engineers can describe how a hardware component behaves (functional abstraction) and how it's physically structured (structural abstraction). This versatility is invaluable in hardware design. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Simulation and Synthesis: </h3>
+                            <p>
+                                Verilog plays a dual role in the design process. It enables simulation, where designers can test and validate their designs in a virtual environment. Additionally, Verilog is used in synthesis tools, which convert high-level descriptions into low-level gate-level representations that can be implemented in hardware. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Event-Driven Execution: </h3>
+                            <p>
+                                Verilog operates on an event-driven model, where changes in signal values trigger the execution of specific blocks of code. This makes it well-suited for modeling synchronous digital systems, where actions occur in response to clock edges. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Hierarchy and Modularity:</h3>
+                            <p>
+                                Hardware designs can quickly become complex. Verilog encourages a hierarchical and modular approach, where large systems are built from smaller, reusable components. This promotes clarity, reusability, and maintainability. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Industry Adoption: </h3>
+                            <p>
+                                Verilog has gained widespread acceptance and is commonly used in both academia and industry. Its standardization ensures compatibility across various tools and platforms. 
+                            </p>
+                        </li>
+                    </ol>
                     <p>
                         In summary, Verilog is a specialized language tailored for the design, simulation, and synthesis of digital hardware systems. It provides engineers with a means to capture the intricacies of electronic circuits, facilitating both conceptual design and practical implementation. 
                     </p>
@@ -147,40 +170,56 @@
                     <p>
                         The field of digital hardware design, including Verilog, is continuously evolving to meet the demands of cutting-edge technology. In this section, we'll explore some of the current trends and applications of Verilog in the industry. 
                     </p>
-                    <ul>
-                        1. FPGA and ASIC Advancements: 
-                        <p>
-                            Verilog remains at the forefront of Field-Programmable Gate Array (FPGA) and Application-Specific Integrated Circuit (ASIC) design. These technologies are integral to various industries, including telecommunications, automotive, and artificial intelligence. Verilog's role in optimizing designs for these platforms is more critical than ever. 
-                        </p>
-                        2. Hardware Acceleration for AI: 
-                        <p>
-                            The surge in Artificial Intelligence (AI) applications has led to a growing demand for hardware acceleration. Verilog is instrumental in designing custom hardware accelerators, such as GPUs and TPUs, to boost AI computations. 
-                        </p>
-                        3. IoT and Embedded Systems: 
-                        <p>
-                            The Internet of Things (IoT) continues to expand, requiring efficient and low-power hardware designs. Verilog's ability to model power consumption and hardware behavior is vital for IoT device development. 
-                        </p>
-                        4. High-Level Synthesis (HLS): 
-                        <p>
-                            HLS tools have gained prominence in recent years. They allow designers to work at a higher level of abstraction, generating hardware from C/C++ code. Verilog plays a role in this process, facilitating the transition from software to hardware. 
-                        </p>
-                        5. Open Source EDA Tools: 
-                        <p>
-                            The emergence of open-source Electronic Design Automation (EDA) tools has democratized hardware design. Verilog's open standard ensures compatibility with these tools, making it accessible to a broader community of designers. 
-                        </p>
-                        6. Mixed-Signal Design (Verilog-AMS): 
-                        <p>
-                            Beyond digital circuits, Verilog-AMS (Analog Mixed-Signal) extends Verilog's capabilities to model analog and mixed-signal systems. This is particularly relevant in the design of integrated circuits that combine digital and analog components. 
-                        </p>
-                        7. Verification and Formal Methods: 
-                        <p>
-                            Verification is a critical aspect of hardware design. Advanced verification techniques, including formal methods, are becoming more prevalent. Verilog provides the foundation for these verification processes. 
-                        </p>
-                        8. Security and Safety-Critical Systems: 
-                        <p>
-                            Verilog is also used in the design of security and safety-critical systems, such as aerospace and automotive applications. Ensuring the reliability and robustness of these systems is of utmost importance. 
-                        </p>
-                    </ul>
+                    <ol>
+                        <li>
+                            <h3>FPGA and ASIC Advancements: </h3>
+                            <p>
+                                Verilog remains at the forefront of Field-Programmable Gate Array (FPGA) and Application-Specific Integrated Circuit (ASIC) design. These technologies are integral to various industries, including telecommunications, automotive, and artificial intelligence. Verilog's role in optimizing designs for these platforms is more critical than ever. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Hardware Acceleration for AI: </h3>
+                            <p>
+                                The surge in Artificial Intelligence (AI) applications has led to a growing demand for hardware acceleration. Verilog is instrumental in designing custom hardware accelerators, such as GPUs and TPUs, to boost AI computations. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>IoT and Embedded Systems: </h3>
+                            <p>
+                                The Internet of Things (IoT) continues to expand, requiring efficient and low-power hardware designs. Verilog's ability to model power consumption and hardware behavior is vital for IoT device development. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>High-Level Synthesis (HLS): </h3>
+                            <p>
+                                HLS tools have gained prominence in recent years. They allow designers to work at a higher level of abstraction, generating hardware from C/C++ code. Verilog plays a role in this process, facilitating the transition from software to hardware. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Open Source EDA Tools: </h3>
+                            <p>
+                                The emergence of open-source Electronic Design Automation (EDA) tools has democratized hardware design. Verilog's open standard ensures compatibility with these tools, making it accessible to a broader community of designers. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Mixed-Signal Design (Verilog-AMS): </h3>
+                            <p>
+                                Beyond digital circuits, Verilog-AMS (Analog Mixed-Signal) extends Verilog's capabilities to model analog and mixed-signal systems. This is particularly relevant in the design of integrated circuits that combine digital and analog components. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Verification and Formal Methods: </h3>
+                            <p>
+                                Verification is a critical aspect of hardware design. Advanced verification techniques, including formal methods, are becoming more prevalent. Verilog provides the foundation for these verification processes. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Security and Safety-Critical Systems: </h3>
+                            <p>
+                                Verilog is also used in the design of security and safety-critical systems, such as aerospace and automotive applications. Ensuring the reliability and robustness of these systems is of utmost importance. 
+                            </p>
+                        </li>
+                    </ol>
                     <p>
                         In conclusion, Verilog is adapting to meet the challenges posed by emerging technologies and applications. Its versatility, standardization, and compatibility with modern tools make it a valuable asset in the dynamic landscape of digital hardware design. 
                     </p>
@@ -196,36 +235,44 @@
                     <p>
                         In the realm of hardware description languages (HDLs), several options are available, each with its own strengths and applications. This section aims to provide a comparative overview of Verilog, VHDL, SystemVerilog, and Verilog-AMS to help you understand their differences and when to choose one over the others. 
                     </p>
-                    <ul>
-                        1. Verilog: 
-                        <ul>
-                            <li>Focus: Verilog primarily targets digital circuit design and simulation. </li>
-                            <li>Concurrency: It uses a module-based concurrency model, allowing designers to describe circuits hierarchically. </li>
-                            <li>Language Style: Verilog is known for its concise and flexible syntax, making it popular for rapid design. </li>
-                            <li>Usage: Commonly used in FPGA and ASIC design and verification. </li>
-                        </ul>
-                        2. VHDL (VHSIC Hardware Description Language): 
-                        <ul>
-                            <li>Focus: VHDL is a versatile language that covers digital, analog, and mixed-signal design.</li>
-                            <li>Concurrency: It employs a process-based concurrency model, offering fine-grained control over simulations. </li>
-                            <li>Language Style: VHDL's syntax is more verbose and structured compared to Verilog. </li>
-                            <li>Usage: Often used in aerospace, automotive, and safety-critical systems design. </li>
-                        </ul>
-                        3. SystemVerilog: 
-                        <ul>
-                            <li>Focus: SystemVerilog extends Verilog's capabilities, offering features for verification, testbenches, and constrained-random testing. </li>
-                            <li>Concurrency: It combines module-based and process-based concurrency, making it suitable for both design and verification. </li>
-                            <li>Language Style: SystemVerilog blends Verilog's conciseness with VHDL's strong typing, providing a powerful tool for complex designs and verification environments. </li>
-                            <li>Usage: Widely adopted in ASIC and complex FPGA designs, particularly for verification purposes. </li>
-                        </ul>
-                        4. Verilog-AMS (Analog Mixed-Signal): 
-                        <ul>
-                            <li>Focus: Verilog-AMS extends Verilog to encompass analog and mixed-signal systems, allowing designers to model both digital and analog behaviors. </li>
-                            <li>Concurrency: It provides a framework for modeling continuous-time analog and discrete-time digital systems. </li>
-                            <li>Language Style: Verilog-AMS introduces analog-specific constructs, making it suitable for applications involving analog and digital interactions. </li>
-                            <li>Usage: Commonly used in the design of integrated circuits and systems with both analog and digital components. </li>
-                        </ul>
-                    </ul>
+                    <ol>
+                        <li>
+                            <h3>Verilog: </h3>
+                            <ul>
+                                <li>Focus: Verilog primarily targets digital circuit design and simulation. </li>
+                                <li>Concurrency: It uses a module-based concurrency model, allowing designers to describe circuits hierarchically. </li>
+                                <li>Language Style: Verilog is known for its concise and flexible syntax, making it popular for rapid design. </li>
+                                <li>Usage: Commonly used in FPGA and ASIC design and verification. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>VHDL (VHSIC Hardware Description Language): </h3>
+                            <ul>
+                                <li>Focus: VHDL is a versatile language that covers digital, analog, and mixed-signal design.</li>
+                                <li>Concurrency: It employs a process-based concurrency model, offering fine-grained control over simulations. </li>
+                                <li>Language Style: VHDL's syntax is more verbose and structured compared to Verilog. </li>
+                                <li>Usage: Often used in aerospace, automotive, and safety-critical systems design. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>SystemVerilog: </h3>
+                            <ul>
+                                <li>Focus: SystemVerilog extends Verilog's capabilities, offering features for verification, testbenches, and constrained-random testing. </li>
+                                <li>Concurrency: It combines module-based and process-based concurrency, making it suitable for both design and verification. </li>
+                                <li>Language Style: SystemVerilog blends Verilog's conciseness with VHDL's strong typing, providing a powerful tool for complex designs and verification environments. </li>
+                                <li>Usage: Widely adopted in ASIC and complex FPGA designs, particularly for verification purposes. </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <h3>Verilog-AMS (Analog Mixed-Signal): </h3>
+                            <ul>
+                                <li>Focus: Verilog-AMS extends Verilog to encompass analog and mixed-signal systems, allowing designers to model both digital and analog behaviors. </li>
+                                <li>Concurrency: It provides a framework for modeling continuous-time analog and discrete-time digital systems. </li>
+                                <li>Language Style: Verilog-AMS introduces analog-specific constructs, making it suitable for applications involving analog and digital interactions. </li>
+                                <li>Usage: Commonly used in the design of integrated circuits and systems with both analog and digital components. </li>
+                            </ul>
+                        </li>
+                    </ol>
                     <p>
                         Choosing the right language depends on the specific requirements of your project. Verilog excels in digital design, VHDL offers versatility for mixed-signal and safety-critical systems, SystemVerilog enhances verification capabilities, and Verilog-AMS is indispensable for designs involving both analog and digital domains. The choice often hinges on the nature of the project, industry standards, and the tools and expertise available. 
                     </p>
@@ -241,62 +288,78 @@
                     <p>
                         To embark on your journey with Verilog, it's essential to grasp the fundamental concepts and principles that underpin this hardware description language. This section will introduce you to the general idea of Verilog and its core components. 
                     </p>
-                    <ul>
-                        1. Behavioral vs. Structural Description:
-                        <p>
-                            Verilog allows you to describe hardware from two primary perspectives:
-                        </p>
-                        <ul>
-                            <li>
-                                Behavioral Description: This focuses on defining the functionality and operation of a hardware component or system without specifying its internal structure. 
-                            </li>
-                            <li>
-                                Structural Description: Here, you specify the interconnections and hierarchy of hardware components to create a detailed representation of the design. 
-                            </li>
-                        </ul>
-                        2. Hierarchy and Modularity: 
-                        <p>
-                            Verilog promotes a modular approach to design. You create reusable modules (or blocks) that represent specific functions or components of your design. 
-                            These modules can be interconnected to form larger, more complex systems. 
-                        </p>
-                        3. Concurrent Execution: 
-                        <p>
-                            Verilog operates on a concurrent execution model. This means that multiple operations or events can happen simultaneously. 
-                            Designers define how these concurrent events interact and affect the overall system behavior. 
-                        </p>
-                        4. Signal and Data Flow: 
-                        <p>
-                            Verilog relies on signals and data flow to describe how information flows within a design. You specify how signals change over time in response to various events, such as clock edges or inputs. 
-                        </p>
-                        
-                        5. Event-Driven Simulation: 
-                        <p>
-                            Verilog simulations are event-driven, meaning that changes in signal values trigger specific actions or processes. 
-                            This event-driven nature is particularly useful for modeling synchronous digital systems, where actions occur in response to clock edges. 
-                        </p>
-                        6. Simulation and Synthesis: 
-                        <p>
-                            Verilog serves dual purposes: simulation and synthesis. 
+                    <ol>
+                        <li>
+                            <h3>Behavioral vs. Structural Description:</h3>
+                            <p>
+                                Verilog allows you to describe hardware from two primary perspectives:
+                            </p>
                             <ul>
                                 <li>
-                                    Simulation allows you to test and verify your designs in a virtual environment. 
+                                    <h4>Behavioral Description:</h4>
+                                    <p>This focuses on defining the functionality and operation of a hardware component or system without specifying its internal structure. </p>
                                 </li>
                                 <li>
-                                    Synthesis translates high-level Verilog descriptions into low-level gate-level representations for physical implementation. 
+                                    <h4>Structural Description:</h4>
+                                    <p>Here, you specify the interconnections and hierarchy of hardware components to create a detailed representation of the design. </p>
                                 </li>
                             </ul>
-                        </p>
-                        7. Standard Libraries and Predefined Modules: 
-                        <p>
-                            Verilog provides standard libraries and predefined modules that simplify common design tasks. 
-                            These modules include basic gates, flip-flops, adders, and more, saving designers time and effort. 
-                        </p>
-                        8. Timing and Synchronization: 
-                        <p>
-                            Timing constraints are essential in Verilog to ensure that your design meets performance and timing requirements. 
-                            Synchronization mechanisms, such as clocks and resets, play a critical role in digital design. 
-                        </p>
-                    </ul>
+                        </li>
+                        <li>
+                            <h3>Hierarchy and Modularity: </h3>
+                            <p>
+                                Verilog promotes a modular approach to design. You create reusable modules (or blocks) that represent specific functions or components of your design. 
+                                These modules can be interconnected to form larger, more complex systems. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Concurrent Execution: </h3>
+                            <p>
+                                Verilog operates on a concurrent execution model. This means that multiple operations or events can happen simultaneously. 
+                                Designers define how these concurrent events interact and affect the overall system behavior. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Signal and Data Flow: </h3>
+                            <p>
+                                Verilog relies on signals and data flow to describe how information flows within a design. You specify how signals change over time in response to various events, such as clock edges or inputs. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Event-Driven Simulation:</h3>
+                            <p>
+                                Verilog simulations are event-driven, meaning that changes in signal values trigger specific actions or processes. 
+                                This event-driven nature is particularly useful for modeling synchronous digital systems, where actions occur in response to clock edges. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Simulation and Synthesis: </h3>
+                            <p>
+                                Verilog serves dual purposes: simulation and synthesis. 
+                                <ul>
+                                    <li>
+                                        Simulation allows you to test and verify your designs in a virtual environment. 
+                                    </li>
+                                    <li>
+                                        Synthesis translates high-level Verilog descriptions into low-level gate-level representations for physical implementation. 
+                                    </li>
+                                </ul>
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Standard Libraries and Predefined Modules: </h3>
+                            <p>
+                                Verilog provides standard libraries and predefined modules that simplify common design tasks. 
+                                These modules include basic gates, flip-flops, adders, and more, saving designers time and effort. 
+                            </p>
+                        <li>
+                            <h3>Timing and Synchronization: </h3>
+                            <p>
+                                Timing constraints are essential in Verilog to ensure that your design meets performance and timing requirements. 
+                                Synchronization mechanisms, such as clocks and resets, play a critical role in digital design. 
+                            </p>
+                        </li>
+                    </ol>
                     <p>
                         As you progress through this tutorial, you'll dive deeper into these concepts and learn how to apply them in practical Verilog design. Understanding these foundational principles will enable you to create efficient and reliable digital hardware systems. 
                     </p>
@@ -312,55 +375,75 @@
                     <p>
                         Block-level design is a fundamental aspect of Verilog that allows you to break down complex hardware systems into manageable, reusable components. In this section, we'll explore the concept of block design within the context of Verilog. 
                     </p>
-                    <ul>
-                        1. Modularization and Abstraction: 
-                        <p>
-                            Block design involves breaking down a larger hardware system into smaller, self-contained modules or blocks. 
-                            Each module represents a specific function or component of the overall design, promoting modularity and abstraction. 
-                        </p>
-                        2. Hierarchical Organization: 
-                        <p>
-                            Verilog allows for a hierarchical organization of modules, where modules can contain other modules. 
-                            This hierarchical structure mirrors the way hardware systems are built in the real world, with components nesting within one another.     
-                        </p>
-                        3. Module Definition: 
-                        <p>
-                            A Verilog module is a fundamental building block of block-level design. 
-                            It encapsulates a specific functionality or behavior and includes input and output ports for communication with other modules. 
-                        </p>
-                        4. Interface and Ports: 
-                        <p>
-                            The interface of a module is defined by its input and output ports. 
-                            Input ports receive signals or data from other modules, while output ports transmit signals or data to other modules.     
-                        </p>
-                        5. Instantiation: 
-                        <p>
-                            In Verilog, you can instantiate modules within other modules. This means that you can use a module as a component in a larger design. 
-                            Instantiation allows for the creation of complex systems by combining simpler, reusable modules.
-                        </p>
-                        6. Connection and Interconnection: 
-                        <p>
-                            Modules communicate with each other through signal connections. Signals can be connected directly from one module's output port to another module's input port. 
-                            Careful interconnection of modules is essential to ensure proper functionality. 
-                        </p>
-                        7. Port Directions: 
-                        <p>
-                            Ports in Verilog modules have specific directions, such as input (input), output (output), or bidirectional (inout). 
-                            These directions dictate how signals flow in and out of a module and help ensure proper connectivity. 
-                        </p>
-                        8. Hierarchy and Readability: 
-                        <p>
-                            Hierarchical design and modularization enhance the readability and maintainability of Verilog code. 
-                            Engineers can focus on the details of individual modules, making it easier to understand and debug complex systems. 
-                        </p>
-                        9. Reusability: 
-                        <p>
-                            One of the key advantages of block-level design is reusability. Well-designed modules can be reused in multiple projects, saving time and effort. 
-                        </p>
-                        10. Testing and Debugging: 
-                        <p>
-                            Block-level design simplifies the testing and debugging process. You can isolate and test individual modules independently before integrating them into the larger system. 
-                        </p>
+                    <ol>
+                        <li>
+                            <h3>Modularization and Abstraction: </h3>
+                            <p>
+                                Block design involves breaking down a larger hardware system into smaller, self-contained modules or blocks. 
+                                Each module represents a specific function or component of the overall design, promoting modularity and abstraction. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Hierarchical Organization: </h3>
+                            <p>
+                                Verilog allows for a hierarchical organization of modules, where modules can contain other modules. 
+                                This hierarchical structure mirrors the way hardware systems are built in the real world, with components nesting within one another.     
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Module Definition: </h3>
+                            <p>
+                                A Verilog module is a fundamental building block of block-level design. 
+                                It encapsulates a specific functionality or behavior and includes input and output ports for communication with other modules. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Interface and Ports: </h3>
+                            <p>
+                                The interface of a module is defined by its input and output ports. 
+                                Input ports receive signals or data from other modules, while output ports transmit signals or data to other modules.     
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Instantiation: </h3>
+                            <p>
+                                In Verilog, you can instantiate modules within other modules. This means that you can use a module as a component in a larger design. 
+                                Instantiation allows for the creation of complex systems by combining simpler, reusable modules.
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Connection and Interconnection: </h3>
+                            <p>
+                                Modules communicate with each other through signal connections. Signals can be connected directly from one module's output port to another module's input port. 
+                                Careful interconnection of modules is essential to ensure proper functionality. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Port Directions: </h3>
+                            <p>
+                                Ports in Verilog modules have specific directions, such as input (input), output (output), or bidirectional (inout). 
+                                These directions dictate how signals flow in and out of a module and help ensure proper connectivity. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Hierarchy and Readability: </h3>
+                            <p>
+                                Hierarchical design and modularization enhance the readability and maintainability of Verilog code. 
+                                Engineers can focus on the details of individual modules, making it easier to understand and debug complex systems. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Reusability: </h3>
+                            <p>
+                                One of the key advantages of block-level design is reusability. Well-designed modules can be reused in multiple projects, saving time and effort. 
+                            </p>
+                        </li>
+                        <li>
+                            <h3>Testing and Debugging: </h3>
+                            <p>
+                                Block-level design simplifies the testing and debugging process. You can isolate and test individual modules independently before integrating them into the larger system. 
+                            </p>
+                        </li>
                     </ul>
                     <p>
                         As you progress through your Verilog journey, you'll learn how to create, instantiate, connect, and effectively manage modules to design efficient and reliable digital systems. Block design is a cornerstone of Verilog and is widely used in both FPGA and ASIC development. 

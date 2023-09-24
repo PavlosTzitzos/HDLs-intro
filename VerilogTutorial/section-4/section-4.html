@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <title>Verilog Tutorial</title>
     <link id="theme-stylesheet" rel="stylesheet" type="text/css" href="../theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
 </head>
 <body>
    <header>
-      <a href="../index.html">Verilog Tutorial</a>
+      <h1><a href="../index.html">Verilog Tutorial</a></h1>
       <h2>Section 4: Examples with Testbenches</h2>
    </header>
 
@@ -39,8 +40,8 @@
                         <li><a href="../section-3/section-3.html">3.1 Verilog Resources</a></li>
                         <li><a href="../section-3/section-3.html">3.2 Verilog Syntax</a></li>
                         <li><a href="../section-3/section-3.html">3.3 Combinational Logic</a></li>
-                        <li><a href="../section-3/section-3.html">3.4 Synchronous Logic</a></li>
-                        <li><a href="../section-3/section-3.html">3.5 Aynchronous Logic</a></li>
+                        <li><a href="../section-3/section-3.html">3.4 Synchronous Sequential Logic</a></li>
+                        <li><a href="../section-3/section-3.html">3.5 Aynchronous Sequential Logic</a></li>
                     </ul>
                 </li>
                 <li>
@@ -48,176 +49,258 @@
                     <ul class="subsection">
                         <li><a href="#section-4">4.1 Verification and Testbenches</a></li>
                         <li><a href="#section-4">4.2 Examples for Combinational Logic</a></li>
-                        <li><a href="#section-4">4.3 Examples for Asynchronous Logic</a></li>
+                        <li><a href="#section-4">4.3 Examples for Synchronous Logic</a></li>
                     </ul>
                 </li>
             </ul>
       </nav>
       <main>
-            <section id="section-4">
-                <section id="section-4-1" class="collapsible">
-                    <div class="header">
-                        <h2>4.1 Verification and Testbenches </h2>
-                    </div>
-                    <!-- Content for section 4.1 -->
-                    <div class="contents">
-                        Verification is a crucial aspect of digital circuit design in Verilog. It involves confirming that your design functions correctly under various conditions. Testbenches are used to automate the verification process by applying stimulus to the design and checking the responses. In this section, we'll explore verification and testbench creation in Verilog. 
-
-1. Verification Process: 
-
-Verification is the process of ensuring that your digital circuit design operates correctly according to its specifications. It involves the following steps: 
-
-Design Under Test (DUT): The circuit or module you want to verify. 
-
-Testbench: A separate Verilog module that generates stimulus for the DUT and monitors its outputs. 
-
-Simulation: Running the testbench and DUT through a simulation tool to observe behavior. 
-
-Assertions: Adding assertions in your testbench to check if expected conditions are met. 
-
-Coverage Analysis: Ensuring that you have tested various scenarios to achieve high test coverage. 
-
-2. Testbench Structure: 
-
-A typical testbench in Verilog consists of the following components: 
-
-Module Instantiation: Instantiate the DUT and connect it to the testbench. 
-
-Clock Generation: Generate clock signals if the DUT relies on a clock. 
-
-Input Generation: Create input stimulus for the DUT. 
-
-Output Monitoring: Capture and compare DUT outputs to expected values. 
-
-3. Example Testbench: 
-
-Below is a simple example of a testbench for a 2-to-1 multiplexer (MUX) designed to verify its functionality: 
-
+         <section id="section-4">
+            <section id="section-4-1" class="collapsible">
+               <div class="header">
+                  <h2>4.1 Verification and Testbenches </h2>
+               </div>
+               <!-- Content for section 4.1 -->
+               <div class="contents">
+                  <p>
+                     Verification is a crucial aspect of digital circuit design in Verilog. It involves confirming that your design functions correctly under various conditions. Testbenches are used to automate the verification process by applying stimulus to the design and checking the responses. In this section, we'll explore verification and testbench creation in Verilog. 
+                  </p>
+                  <ol>
+                     <li>
+                        <h3>Verification Process:</h3>
+                        <p>Verification is the process of ensuring that your digital circuit design operates correctly according to its specifications.
+                           It involves the following steps:
+                           <ul>
+                              <li>Design Under Test (DUT): The circuit or module you want to verify. </li>
+                              <li>Testbench: A separate Verilog module that generates stimulus for the DUT and monitors its outputs. </li>
+                              <li>Simulation: Running the testbench and DUT through a simulation tool to observe behavior. </li>
+                              <li>Assertions: Adding assertions in your testbench to check if expected conditions are met. </li>
+                              <li>Coverage Analysis: Ensuring that you have tested various scenarios to achieve high test coverage. </li>
+                           </ul>
+                        </p>
+                     </li>
+                     <li>
+                        <h3>Testbench Structure: </h3>
+                        <p>A typical testbench in Verilog consists of the following components: 
+                           <ul>
+                              <li>Module Instantiation: Instantiate the DUT and connect it to the testbench. </li>
+                              <li>Clock Generation: Generate clock signals if the DUT relies on a clock. </li>
+                              <li>Input Generation: Create input stimulus for the DUT. </li>
+                              <li>Output Monitoring: Capture and compare DUT outputs to expected values. </li>
+                           </ul>
+                        </p>
+                     </li>
+                     <li>
+                        <h3>Example Testbench: </h3>
+                        <p>Below is a simple example of a testbench for a 2-to-1 multiplexer (MUX) designed to verify its functionality: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_mux_2to1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-1">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-1">
 module tb_mux_2to1; 
- 
-   // Inputs and outputs for the testbench 
-   reg [1:0] A, B; 
-   reg select; 
-   wire Y; 
- 
-   // Instantiate the MUX DUT 
-   mux_2to1 DUT ( 
-      .A(A), 
-      .B(B), 
-      .select(select), 
-      .Y(Y) 
-   ); 
- 
-   // Clock generation (if needed) 
-   reg clk = 0; 
-   always begin 
-      #5 clk = ~clk; 
-   end 
- 
-   // Testbench stimulus 
-   initial begin 
-      // Apply test cases 
-      A = 2'b00; B = 2'b11; select = 1'b0; 
-      #10 if (Y !== 1'b0) $display("Test 1 failed"); 
- 
-      A = 2'b10; B = 2'b01; select = 1'b1; 
-      #10 if (Y !== 1'b1) $display("Test 2 failed"); 
- 
-      // Add more test cases as needed 
- 
-      // Terminate simulation 
-      $finish; 
-   end 
- 
-endmodule 
- 
 
-4. Running Simulation: 
+// Inputs and outputs for the testbench 
+reg [1:0] A, B; 
+reg select; 
+wire Y; 
 
-To run the simulation with this testbench, you can use a Verilog simulation tool like Icarus Verilog or ModelSim. Here's an example command to simulate the testbench: 
-
-For Icarus Verilog: 
-
-iverilog -o tb_mux_2to1 tb_mux_2to1.v mux_2to1.v 
-vvp tb_mux_2to1 
- 
-
-For ModelSim: 
-
-# Compile the design and testbench 
-vlog mux_2to1.v tb_mux_2to1.v 
- 
-# Run simulation 
-vsim -c tb_mux_2to1 -do "run -all; exit" 
- 
-
-5. Analyzing Results: 
-
-The simulation tool will provide output indicating whether the testbench passed or failed for each test case. You can use this feedback to debug and refine your design. 
-
-Creating effective testbenches and thoroughly verifying your Verilog designs are essential steps in ensuring the correctness and reliability of your digital circuits.
-                    </div>
-                </section>
-
-                <section id="section-4-2" class="collapsible">
-                    <div class="header">
-                        <h2>4.2 Examples for Combinational Logic</h2>
-                    </div>
-                    <!-- Content for section 4.2 -->
-                    <div class="contents">
-                        Combinational logic circuits are fundamental components in digital design, performing operations based solely on the current input values. In this section, we'll explore practical Verilog examples for various combinational logic circuits to illustrate their implementation. 
-
-1. Basic Logic Gates: 
-
-AND Gate: 
-
-module and_gate ( 
-   input wire a, 
-   input wire b, 
-   output wire y 
+// Instantiate the MUX DUT 
+mux_2to1 DUT ( 
+.A(A), 
+.B(B), 
+.select(select), 
+.Y(Y) 
 ); 
-   assign y = a & b; // AND operation 
+
+// Clock generation (if needed) 
+reg clk = 0; 
+always begin 
+#5 clk = ~clk; 
+end 
+
+// Testbench stimulus 
+initial begin 
+// Apply test cases 
+A = 2'b00; B = 2'b11; select = 1'b0; 
+#10 if (Y !== 1'b0) $display("Test 1 failed"); 
+
+A = 2'b10; B = 2'b01; select = 1'b1; 
+#10 if (Y !== 1'b1) $display("Test 2 failed"); 
+
+// Add more test cases as needed 
+
+// Terminate simulation 
+$finish; 
+end 
+
 endmodule 
- 
+                           </code></pre>
+                        </div>
+                     </li>
+                     <li>
+                        <h3>Running Simulation:</h3>
+                        <p>
+                           To run the simulation with this testbench, you can use a Verilog simulation tool like Icarus Verilog or ModelSim. Here's an example command to simulate the testbench: 
+                        </p>
+                        <ul>
+                           <li>
+                              <h3>For Icarus Verilog: </h3>
+                              <div class="code-box">
+                                 <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-2">Copy</button>
+                                 </div>
+                                 <pre><code class="language-cmd" id="code-2">
+iverilog -o tb_mux_2to1 tb_mux_2to1.v mux_2to1.v
+                                 </code> </pre>
+                              </div>
+                              <div class="code-box">
+                                 <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-3">Copy</button>
+                                 </div>
+                                 <pre><code class="language-cmd" id="code-3">
+vvp tb_mux_2to1
+                                 </code> </pre>
+                              </div>
+                           </li>
+                           <li>
+                              <h3>For ModelSim: </h3>
+                              Compile
+                              <div class="code-box">
+                                 <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-4">Copy</button>
+                                 </div>
+                                 <pre><code class="language-cmd" id="code-4">
+vlog mux_2to1.v tb_mux_2to1.v 
+                                 </code> </pre>
+                              </div>
+                              Run the simulation
+                              <div class="code-box">
+                                 <div class="code-header">
+                                    <span class="filename">cmd</span>
+                                    <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                    <!--<button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>-->
+                                    <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                    <button class="copy-button" data-code-id="code-5">Copy</button>
+                                 </div>
+                                 <pre><code class="language-cmd" id="code-5">
+vsim -c tb_mux_2to1 -do "run -all; exit"
+                                 </code> </pre>
+                              </div>
+                           </li>
+                        </ul>
+                     </li>
+                     <li>
+                        <h3>Analyzing Results: </h3>
+                        <p>The simulation tool will provide output indicating whether the testbench passed or failed for each test case. You can use this feedback to debug and refine your design. </p>
+                     </li>
+                  </ol>
+                  <p>Creating effective testbenches and thoroughly verifying your Verilog designs are essential steps in ensuring the correctness and reliability of your digital circuits.</p>
+               </div>
+            </section>
 
-Testbench for AND Gate: 
-
+            <section id="section-4-2" class="collapsible">
+               <div class="header">
+                  <h2>4.2 Examples for Combinational Logic</h2>
+               </div>
+               <!-- Content for section 4.2 -->
+               <div class="contents">
+                  <p>
+                     Combinational logic circuits are fundamental components in digital design, performing operations based solely on the current input values. In this section, we'll explore practical Verilog examples for various combinational logic circuits to illustrate their implementation. 
+                  </p>
+                  <ol>
+                     <li>
+                        <h3>Basic Logic Gates: </h3>
+                        <p>AND Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">and_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-6">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-6">
+module and_gate (
+input wire A,
+input wire B,
+output wire Y
+);
+assign Y = A & B;
+endmodule
+                           </code></pre>
+                        </div>
+                        <p>Testbench for AND Gate:</p>
+                        <div class="code-box">
+                        <div class="code-header">
+                              <span class="filename">tb_and_gate.v</span>
+                              <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                              <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                              <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                              <button class="copy-button" data-code-id="code-7">Copy</button>
+                        </div>
+                        <pre><code class="language-verilog" id="code-7">
 module tb_and_gate; 
    reg a; 
    reg b; 
    wire y; 
+
    // Instantiate the AND gate module 
    and_gate and_gate_inst ( 
       .a(a), 
       .b(b), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 0; 
       b = 0; 
- 
+
       // Test case 1: Both inputs are 0 
       #10 assert(y === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input a is 1, b is 0 
       a = 1; 
       #10 assert(y === 0) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Both inputs are 1 
       b = 1; 
       #10 assert(y === 1) else $display("Test case 3 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-OR Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>OR Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">or_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-8">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-8">
 module or_gate ( 
    input wire a, 
    input wire b, 
@@ -225,87 +308,119 @@ module or_gate (
 ); 
    assign y = a | b; // OR operation 
 endmodule 
- 
-
-Testbench for OR Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for OR Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_or_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-9">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-9">
 module tb_or_gate; 
    reg a; 
    reg b; 
    wire y; 
- 
+
    // Instantiate the OR gate module 
    or_gate or_gate_inst ( 
       .a(a), 
       .b(b), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 0; 
       b = 0; 
- 
+
       // Test case 1: Both inputs are 0 
       #10 assert(y === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input a is 1, b is 0 
       a = 1; 
       #10 assert(y === 1) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Both inputs are 1 
       b = 1; 
       #10 assert(y === 1) else $display("Test case 3 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-NOT Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>NOT Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">not_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-10">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-10">
 module not_gate ( 
    input wire a, 
    output wire y 
 ); 
    assign y = ~a; // NOT operation 
 endmodule 
- 
-
-Testbench for NOT Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for NOT Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">or_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-11">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-11">
 module tb_not_gate; 
    reg a; 
    wire y; 
- 
+
    // Instantiate the NOT gate module 
    not_gate not_gate_inst ( 
       .a(a), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize input 
       a = 0; 
- 
+
       // Test case 1: Input is 0 
       #10 assert(y === 1) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input is 1 
       a = 1; 
       #10 assert(y === 0) else $display("Test case 2 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-XOR Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>XOR Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">xor_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-12">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-12">
 module xor_gate ( 
    input wire a, 
    input wire b, 
@@ -313,50 +428,66 @@ module xor_gate (
 ); 
    assign y = a ^ b; // XOR operation 
 endmodule 
- 
-
-Testbench for XOR Gate: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for XOR Gate: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_xor_gate.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-13">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-13">
 module tb_xor_gate; 
    reg a; 
    reg b; 
    wire y; 
- 
+
    // Instantiate the XOR gate module 
    xor_gate xor_gate_inst ( 
       .a(a), 
       .b(b), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 0; 
       b = 0; 
- 
+
       // Test case 1: Both inputs are 0 
       #10 assert(y === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input a is 1, b is 0 
       a = 1; 
       #10 assert(y === 1) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Both inputs are 1 
       b = 1; 
       #10 assert(y === 0) else $display("Test case 3 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
-
- 
-
-2. Multiplexers (MUX): 
-
-2-to-1 MUX: 
-
+                           </code></pre>
+                        </div>
+                     </li>
+                     <li>
+                        <h3>Multiplexers (MUX): </h3>
+                        <p>2-to-1 MUX: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">mux_2to1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-14">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-14">
 module mux_2to1 ( 
    input wire a,     // Input A 
    input wire b,     // Input B 
@@ -365,16 +496,24 @@ module mux_2to1 (
 ); 
    assign y = (sel) ? b : a; // MUX operation 
 endmodule 
- 
-
-Testbench for 2-to-1 MUX: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 2-to-1 MUX: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_mux_2to1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-15">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-15">
 module tb_mux_2to1; 
    reg a; 
    reg b; 
    reg sel; 
    wire y; 
- 
+
    // Instantiate the 2-to-1 MUX module 
    mux_2to1 mux ( 
       .a(a), 
@@ -382,29 +521,37 @@ module tb_mux_2to1;
       .sel(sel), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize signals 
       a = 0; 
       b = 1; 
       sel = 0; 
- 
+
       // Test case 1: Select A (sel=0) 
       #10 assert(y === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Select B (sel=1) 
       sel = 1; 
       #10 assert(y === 1) else $display("Test case 2 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-4-to-1 MUX: 
-
+                           </code></pre>
+                        </div>
+                        <p>4-to-1 MUX: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">mux_4to1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-16">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-16">
 module mux_4to1 ( 
    input wire [3:0] a,     // 4-bit Input A 
    input wire [3:0] b,     // 4-bit Input B 
@@ -412,21 +559,29 @@ module mux_4to1 (
    output wire [3:0] y     // 4-bit Output 
 ); 
    assign y = (sel == 2'b00) ? a : 
-             (sel == 2'b01) ? b : 
-             (sel == 2'b10) ? 4'b0 : // Default output 
-             (sel == 2'b11) ? 4'bz : // High-Z output 
-             4'bx; // Invalid state 
+            (sel == 2'b01) ? b : 
+            (sel == 2'b10) ? 4'b0 : // Default output 
+            (sel == 2'b11) ? 4'bz : // High-Z output 
+            4'bx; // Invalid state 
 endmodule 
- 
-
-Testbench for 4-to-1 MUX: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 4-to-1 MUX: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_mux_4to1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-17">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-17">
 module tb_mux_4to1; 
    reg [3:0] a; 
    reg [3:0] b; 
    reg [1:0] sel; 
    wire [3:0] y; 
- 
+
    // Instantiate the 4-to-1 MUX module 
    mux_4to1 mux ( 
       .a(a), 
@@ -434,43 +589,49 @@ module tb_mux_4to1;
       .sel(sel), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize signals 
       a = 4'b1101; 
       b = 4'b0010; 
       sel = 2'b00; 
- 
+
       // Test case 1: Select A (sel=00) 
       #10 assert(y === 4'b1101) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Select B (sel=01) 
       sel = 2'b01; 
       #10 assert(y === 4'b0010) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Default output (sel=10) 
       sel = 2'b10; 
       #10 assert(y === 4'b0000) else $display("Test case 3 failed"); 
- 
+
       // Test case 4: High-Z output (sel=11) 
       sel = 2'b11; 
       #10 assert(y === 4'bz) else $display("Test case 4 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-These Verilog code examples and testbenches demonstrate the functionality of 2-to-1 and 4-to-1 multiplexers, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. 
-
- 
-
-3. DeMUX : 
-
-1-to-2 Demultiplexer (DeMUX): 
-
+                           </code></pre>
+                        </div>
+                        <p>These Verilog code examples and testbenches demonstrate the functionality of 2-to-1 and 4-to-1 multiplexers, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. </p>
+                     </li>
+                     <li>
+                        <h3>DeMUX : </h3>
+                        <p>1-to-2 Demultiplexer (DeMUX): </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">demux_1to2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-18">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-18">
 module demux_1to2 ( 
    input wire a,           // Input 
    input wire select,      // Selection control 
@@ -480,16 +641,24 @@ module demux_1to2 (
    assign y0 = (select) ? 1'b0 : a; // Output 0 when select is 1, else input a 
    assign y1 = (select) ? a : 1'b0; // Output 1 when select is 1, else 0 
 endmodule 
- 
-
-Testbench for 1-to-2 Demultiplexer (DeMUX): 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 1-to-2 Demultiplexer (DeMUX): </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_demux_1to2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-19">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-19">
 module tb_demux_1to2; 
    reg a; 
    reg select; 
    wire y0; 
    wire y1; 
- 
+
    // Instantiate the 1-to-2 Demultiplexer module 
    demux_1to2 demux ( 
       .a(a), 
@@ -497,37 +666,45 @@ module tb_demux_1to2;
       .y0(y0), 
       .y1(y1) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 0; 
       select = 0; 
- 
+
       // Test case 1: Select is 0, input is 0 
       #10 assert(y0 === 0 && y1 === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Select is 0, input is 1 
       a = 1; 
       #10 assert(y0 === 1 && y1 === 0) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Select is 1, input is 0 
       select = 1; 
       a = 0; 
       #10 assert(y0 === 0 && y1 === 0) else $display("Test case 3 failed"); 
- 
+
       // Test case 4: Select is 1, input is 1 
       a = 1; 
       #10 assert(y0 === 0 && y1 === 1) else $display("Test case 4 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-1-to-4 Demultiplexer (DeMUX): 
-
+                           </code></pre>
+                        </div>
+                        <p>1-to-4 Demultiplexer (DeMUX): </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">demux_1to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-20">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-20">
 module demux_1to4 ( 
    input wire a,             // Input 
    input wire [1:0] select, // 2-bit selection control 
@@ -541,10 +718,18 @@ module demux_1to4 (
    assign y2 = (select == 2'b10) ? a : 1'b0; // Output 2 when select is 10, else 0 
    assign y3 = (select == 2'b11) ? a : 1'b0; // Output 3 when select is 11, else 0 
 endmodule 
- 
-
-Testbench for 1-to-4 Demultiplexer (DeMUX): 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 1-to-4 Demultiplexer (DeMUX): </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">demux_1to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-21">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-21">
 module tb_demux_1to4; 
    reg a; 
    reg [1:0] select; 
@@ -552,7 +737,7 @@ module tb_demux_1to4;
    wire y1; 
    wire y2; 
    wire y3; 
- 
+
    // Instantiate the 1-to-4 Demultiplexer module 
    demux_1to4 demux ( 
       .a(a), 
@@ -562,149 +747,185 @@ module tb_demux_1to4;
       .y2(y2), 
       .y3(y3) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 0; 
       select = 2'b00; 
- 
+
       // Test case 1: Select is 00, input is 0 
       #10 assert(y0 === 0 && y1 === 0 && y2 === 0 && y3 === 0) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Select is 00, input is 1 
       a = 1; 
       #10 assert(y0 === 1 && y1 === 0 && y2 === 0 && y3 === 0) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Select is 01, input is 0 
       select = 2'b01; 
       a = 0; 
       #10 assert(y0 === 0 && y1 === 0 && y2 === 0 && y3 === 0) else $display("Test case 3 failed"); 
- 
+
       // Test case 4: Select is 01, input is 1 
       a = 1; 
       #10 assert(y0 === 0 && y1 === 1 && y2 === 0 && y3 === 0) else $display("Test case 4 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
-endmodule 
- 
-
-These Verilog code examples and testbenches demonstrate the functionality of 1-to-2 and 1-to-4 Demultiplexers (DeMUX) along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. 
-
- 
-
-4. Decoders: 
-
-3-to-8 Decoder: 
-
-module decoder_3to8 ( 
+endmodule  
+                           </code></pre>
+                        </div>
+                        <p>These Verilog code examples and testbenches demonstrate the functionality of 1-to-2 and 1-to-4 Demultiplexers (DeMUX) along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. </p>
+                     </li>
+                     <li>
+                        <h3>Decoders: </h3>
+                        <p>3-to-8 Decoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">decoder_3to8_1.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-22">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-22">
+module decoder_3to8_1 ( 
    input wire [2:0] a,      // 3-bit Input 
    output wire [7:0] y      // 8-bit Output 
 ); 
    assign y = (a == 3'b000) ? 8'b00000001 : 
-             (a == 3'b001) ? 8'b00000010 : 
-             (a == 3'b010) ? 8'b00000100 : 
-             (a == 3'b011) ? 8'b00001000 : 
-             (a == 3'b100) ? 8'b00010000 : 
-             (a == 3'b101) ? 8'b00100000 : 
-             (a == 3'b110) ? 8'b01000000 : 
-             (a == 3'b111) ? 8'b10000000 : 
-             8'b00000000; // Default output (invalid input) 
+            (a == 3'b001) ? 8'b00000010 : 
+            (a == 3'b010) ? 8'b00000100 : 
+            (a == 3'b011) ? 8'b00001000 : 
+            (a == 3'b100) ? 8'b00010000 : 
+            (a == 3'b101) ? 8'b00100000 : 
+            (a == 3'b110) ? 8'b01000000 : 
+            (a == 3'b111) ? 8'b10000000 : 
+            8'b00000000; // Default output (invalid input) 
 endmodule 
- 
-
-Testbench for 3-to-8 Decoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 3-to-8 Decoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_decoder_3to8.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-23">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-23">
 module tb_decoder_3to8; 
    reg [2:0] a; 
    wire [7:0] y; 
- 
+
    // Instantiate the 3-to-8 Decoder module 
    decoder_3to8 decoder ( 
       .a(a), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize signals 
       a = 3'b000; 
- 
+
       // Test case 1: Input = 000 
       #10 assert(y === 8'b00000001) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input = 110 
       a = 3'b110; 
       #10 assert(y === 8'b01000000) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Default output (invalid input) 
       a = 3'b101; 
       #10 assert(y === 8'b00000000) else $display("Test case 3 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-2-to-4 Decoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>2-to-4 Decoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">decoder_2to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-24">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-24">
 module decoder_2to4 ( 
    input wire [1:0] a,      // 2-bit Input 
    output wire [3:0] y      // 4-bit Output 
 ); 
    assign y = (a == 2'b00) ? 4'b0001 : 
-             (a == 2'b01) ? 4'b0010 : 
-             (a == 2'b10) ? 4'b0100 : 
-             (a == 2'b11) ? 4'b1000 : 
-             4'b0000; // Default output (invalid input) 
+            (a == 2'b01) ? 4'b0010 : 
+            (a == 2'b10) ? 4'b0100 : 
+            (a == 2'b11) ? 4'b1000 : 
+            4'b0000; // Default output (invalid input) 
 endmodule 
- 
-
-Testbench for 2-to-4 Decoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 2-to-4 Decoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_decoder_2to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-25">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-25">
 module tb_decoder_2to4; 
    reg [1:0] a; 
    wire [3:0] y; 
- 
+
    // Instantiate the 2-to-4 Decoder module 
    decoder_2to4 decoder ( 
       .a(a), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize signals 
       a = 2'b01; 
- 
+
       // Test case 1: Input = 01 
       #10 assert(y === 4'b0010) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input = 10 
       a = 2'b10; 
       #10 assert(y === 4'b0100) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Default output (invalid input) 
       a = 2'b11; 
       #10 assert(y === 4'b0000) else $display("Test case 3 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-These Verilog code examples and testbenches demonstrate the functionality of 3-to-8 and 2-to-4 decoders, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. 
-
- 
-
-5. Encoders 
-
-2-to-4 Priority Encoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>These Verilog code examples and testbenches demonstrate the functionality of 3-to-8 and 2-to-4 decoders, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. </p>
+                     </li>
+                     <li>
+                        <h3>Encoders </h3>
+                        <p>2-to-4 Priority Encoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">priority_encoder_2to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-26">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-26">
 module priority_encoder_2to4 ( 
    input wire [1:0] a,     // 2-bit Input 
    output wire [3:0] y     // 4-bit Output 
@@ -714,102 +935,133 @@ module priority_encoder_2to4 (
    assign y[2] = (a[1] == 1'b1 && a[0] == 1'b1) ? 1'b1 : 1'b0; 
    assign y[3] = (a[1] == 1'b0 && a[0] == 1'b0) ? 1'b1 : 1'b0; 
 endmodule 
- 
-
-Testbench for 2-to-4 Priority Encoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 2-to-4 Priority Encoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_priority_encoder_2to4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-27">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-27">
 module tb_priority_encoder_2to4; 
    reg [1:0] a; 
    wire [3:0] y; 
- 
+
    // Instantiate the 2-to-4 Priority Encoder module 
    priority_encoder_2to4 encoder ( 
       .a(a), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 2'b00; 
- 
+
       // Test case 1: Input is 00 
       #10 assert(y === 4'b1000) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input is 01 
       a = 2'b01; 
       #10 assert(y === 4'b0100) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Input is 10 
       a = 2'b10; 
       #10 assert(y === 4'b0010) else $display("Test case 3 failed"); 
- 
+
       // Test case 4: Input is 11 
       a = 2'b11; 
       #10 assert(y === 4'b0001) else $display("Test case 4 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-4-to-2 Binary Encoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>4-to-2 Binary Encoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">binary_encoder_4to2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-28">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-28">
 module binary_encoder_4to2 ( 
    input wire [3:0] a,  // 4-bit Input 
    output wire [1:0] y  // 2-bit Output 
 ); 
    assign y = (a != 4'b0000) ? {1'b1, 1'b0} : 
-              (a != 4'b0001) ? {1'b0, 1'b1} : 
-              (a != 4'b0010) ? {1'b0, 1'b1} : 
-              (a != 4'b0100) ? {1'b0, 1'b1} : {1'b0, 1'b0}; 
+            (a != 4'b0001) ? {1'b0, 1'b1} : 
+            (a != 4'b0010) ? {1'b0, 1'b1} : 
+            (a != 4'b0100) ? {1'b0, 1'b1} : {1'b0, 1'b0}; 
 endmodule 
- 
-
-Testbench for 4-to-2 Binary Encoder: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 4-to-2 Binary Encoder: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_binary_encoder_4to2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-29">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-29">
 module tb_binary_encoder_4to2; 
    reg [3:0] a; 
    wire [1:0] y; 
- 
+
    // Instantiate the 4-to-2 Binary Encoder module 
    binary_encoder_4to2 encoder ( 
       .a(a), 
       .y(y) 
    ); 
- 
+
    // Test scenario 
    initial begin 
       // Initialize inputs 
       a = 4'b0000; 
- 
+
       // Test case 1: Input is 0000 
       #10 assert(y === 2'b00) else $display("Test case 1 failed"); 
- 
+
       // Test case 2: Input is 0001 
       a = 4'b0001; 
       #10 assert(y === 2'b01) else $display("Test case 2 failed"); 
- 
+
       // Test case 3: Input is 0010 
       a = 4'b0010; 
       #10 assert(y === 2'b10) else $display("Test case 3 failed"); 
- 
+
       // Test case 4: Input is 0100 
       a = 4'b0100; 
       #10 assert(y === 2'b11) else $display("Test case 4 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
-
- 
-
-6. Arithmetic Logic Units (ALU): 
-
-Example: 4-bit ALU (alu_4bit.v) 
-
+                           </code></pre>
+                        </div>
+                     </li>
+                     <li>
+                        <h3>Arithmetic Logic Units (ALU): </h3>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">alu_4bit.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-30">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-30">
 module alu_4bit ( 
    input [3:0] A, 
    input [3:0] B, 
@@ -827,469 +1079,321 @@ module alu_4bit (
       endcase 
    end 
 endmodule 
- 
+                           </code></pre>
+                        </div>
+                        <p></p>
+                     </li>
+                  </ol>
+                  <p>These Verilog examples cover various combinational logic circuits, from basic gates to more complex components like multiplexers, decoders, and arithmetic logic units (ALUs). </p>
+               </div>
+            </section>
 
-These Verilog examples cover various combinational logic circuits, from basic gates to more complex components like multiplexers, decoders, and arithmetic logic units (ALUs). You can use these examples as a starting point for your own digital circuit designs or for educational purposes. 
-                    </div>
-                </section>
-
-                <section id="section-4-3" class="collapsible">
-                    <div class="header">
-                        <h2>4.3 Examples for Synchronous Logic </h2>
-                    </div>
-                    <!-- Content for section 4.3 -->
-                    <div class="contents">
-                        1. Flip-Flops (FFs): 
-
-D FF : 
-
+            <section id="section-4-3" class="collapsible">
+               <div class="header">
+                  <h2>4.3 Examples for Synchronous Logic </h2>
+               </div>
+               <!-- Content for section 4.3 -->
+               <div class="contents">
+                  <ol>
+                     <li>
+                        <h3>Flip-Flops (FFs): </h3>
+                        <p>D flip-flop activated at positive edge of clock (<i>posedge</i>) : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">d_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-31">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-31">
 module d_flip_flop ( 
-
    input wire clk,   // Clock input 
-
    input wire reset, // Reset input (asynchronous) 
-
    input wire d,     // Data input 
-
    output wire q     // Output 
-
-); 
-
+);
    always @(posedge clk or posedge reset) begin 
-
       if (reset) 
-
          q <= 1'b0; // Reset the flip-flop asynchronously 
-
       else 
-
          q <= d;    // Store the data input on the rising clock edge 
-
    end 
-
 endmodule 
-
- 
-
-Testbench for D FF : 
-
-module tb_d_flip_flop; 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for D FF : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_d_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-32">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-32">
+module tb_d_flip_flop;
    reg clk; 
-
    reg reset; 
-
    reg d; 
-
    wire q; 
-
-  
 
    // Instantiate the D Flip-Flop module 
-
    d_flip_flop dflop ( 
-
       .clk(clk), 
-
       .reset(reset), 
-
       .d(d), 
-
       .q(q) 
-
    ); 
-
-  
-
+   
    // Clock generation 
-
    always begin 
-
       #5 clk = ~clk; 
-
    end 
-
-  
-
+   
    // Test scenario 
-
    initial begin 
-
       // Initialize signals 
-
       clk = 0; 
-
       reset = 0; 
-
       d = 0; 
-
-  
-
+      
       // Apply reset 
-
       reset = 1; 
-
       #10 reset = 0; 
-
-  
-
+      
       // Test case 1: Set D to 1 
-
       d = 1; 
-
       #10 assert(q === 1) else $display("Test case 1 failed"); 
-
-  
-
+      
       // Test case 2: Toggle D while clock is high 
-
       d = 0; 
-
       #5 d = 1; 
-
       #5 d = 0; 
-
       #5 d = 1; 
-
       #10 assert(q === 1) else $display("Test case 2 failed"); 
-
-  
-
+      
       // Test case 3: Set D to 0 
-
       d = 0; 
-
       #10 assert(q === 0) else $display("Test case 3 failed"); 
-
-  
-
+      
       // End simulation 
-
       $finish; 
-
    end 
-
-endmodule 
-
- 
-
-JK FF : 
-
+   endmodule 
+                           </code></pre>
+                        </div>
+                        <p>JK flip-flop activated at positive edge of clock (<i>posedge</i>) : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">jk_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-33">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-33">
 module jk_flip_flop ( 
-
    input wire clk,    // Clock input 
-
    input wire reset,  // Reset input (asynchronous) 
-
    input wire j,      // J input 
-
    input wire k,      // K input 
-
    output wire q,     // Output 
-
    output wire q_bar  // Complement of Q 
-
 ); 
-
    reg q_next; // Next state of Q 
-
-  
-
+   
    always @(posedge clk or posedge reset) begin 
-
       if (reset) 
-
          q_next <= 1'b0; // Reset the flip-flop asynchronously 
-
       else 
-
          q_next <= (j & q_bar) | (k & q); // JK flip-flop behavior 
-
    end 
-
-  
-
+   
    assign q = q_next; 
-
    assign q_bar = ~q_next; 
-
 endmodule 
-
- 
-
-Testbench for JK FF : 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for JK FF : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_jk_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-34">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-34">
 module tb_jk_flip_flop; 
-
    reg clk; 
-
    reg reset; 
-
    reg j; 
-
    reg k; 
-
    wire q; 
-
    wire q_bar; 
-
-  
 
    // Instantiate the JK Flip-Flop module 
-
    jk_flip_flop jkflop ( 
-
       .clk(clk), 
-
       .reset(reset), 
-
       .j(j), 
-
       .k(k), 
-
       .q(q), 
-
       .q_bar(q_bar) 
-
-   ); 
-
-  
+   );
 
    // Clock generation 
-
    always begin 
-
-      #5 clk = ~clk; 
-
+   #5 clk = ~clk; 
    end 
 
-  
-
    // Test scenario 
-
    initial begin 
-
       // Initialize signals 
-
       clk = 0; 
-
       reset = 0; 
-
       j = 0; 
-
       k = 0; 
 
-  
-
       // Apply reset 
-
       reset = 1; 
-
       #10 reset = 0; 
-
-  
 
       // Test case 1: J=1, K=0 (Toggle) 
-
       j = 1; 
-
       k = 0; 
-
       #10 assert(q === 1 && q_bar === 0) else $display("Test case 1 failed"); 
-
-  
 
       // Test case 2: J=0, K=1 (Toggle) 
-
       j = 0; 
-
       k = 1; 
-
       #10 assert(q === 0 && q_bar === 1) else $display("Test case 2 failed"); 
-
-  
 
       // Test case 3: J=1, K=1 (No change) 
-
       j = 1; 
-
       k = 1; 
-
       #10 assert(q === 1 && q_bar === 0) else $display("Test case 3 failed"); 
 
-  
-
       // End simulation 
-
       $finish; 
-
    end 
-
 endmodule 
-
- 
-
-T FF : 
-
+                           </code></pre>
+                        </div>
+                        <p>T flip-flop at positive edge of clock (<i>posedge</i>) : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">t_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-35">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-35">
 module t_flip_flop ( 
-
    input wire clk,    // Clock input 
-
    input wire reset,  // Reset input (asynchronous) 
-
    input wire t,      // Toggle input 
-
    output wire q,     // Output 
-
    output wire q_bar  // Complement of Q 
-
 ); 
-
    reg q_next; // Next state of Q 
-
-  
-
+   
    always @(posedge clk or posedge reset) begin 
-
       if (reset) 
-
          q_next <= 1'b0; // Reset the flip-flop asynchronously 
-
       else if (t) 
-
          q_next <= ~q_next; // Toggle the flip-flop state on the rising clock edge 
-
    end 
-
-  
-
+   
    assign q = q_next; 
-
    assign q_bar = ~q_next; 
-
 endmodule 
-
- 
-
-Testbench for T FF : 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for T FF : </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_t_flip_flop.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-36">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-36">
 module tb_t_flip_flop; 
-
    reg clk; 
-
    reg reset; 
-
    reg t; 
-
    wire q; 
-
    wire q_bar; 
-
-  
-
+   
    // Instantiate the T Flip-Flop module 
-
    t_flip_flop tflop ( 
-
       .clk(clk), 
-
       .reset(reset), 
-
       .t(t), 
-
       .q(q), 
-
       .q_bar(q_bar) 
-
    ); 
-
-  
-
+   
    // Clock generation 
-
    always begin 
-
-      #5 clk = ~clk; 
-
+      #5 clk = ~clk;
    end 
-
-  
-
+   
    // Test scenario 
-
    initial begin 
-
       // Initialize signals 
-
       clk = 0; 
-
       reset = 0; 
-
       t = 0; 
-
-  
-
+      
       // Apply reset 
-
       reset = 1; 
-
       #10 reset = 0; 
-
-  
-
+      
       // Test case 1: Toggle T input 
-
       t = 1; 
-
       #10 assert(q === 1 && q_bar === 0) else $display("Test case 1 failed"); 
-
-  
-
+      
       // Test case 2: Toggle T input again 
-
       t = 0; 
-
       #5 t = 1; 
-
       #10 assert(q === 0 && q_bar === 1) else $display("Test case 2 failed"); 
-
-  
-
+      
       // Test case 3: No change (T=0) 
-
       t = 0; 
-
       #10 assert(q === 0 && q_bar === 1) else $display("Test case 3 failed"); 
-
-  
-
+      
       // End simulation 
-
       $finish; 
-
    end 
-
 endmodule 
-
- 
-
-These Verilog examples cover various synchronous logic FFs, including D FFs , JK FFs , T FFs with testbenches to simulate them. 
-
- 
-
-2. Counters 
-
- 
-
-3-bit Up Counter: 
-
+                           </code></pre>
+                        </div>
+                        <p>These Verilog examples cover various synchronous logic FFs, including D FFs , JK FFs , T FFs with testbenches to simulate them. </p>
+                     </li>
+                     <li>
+                        <h3>Counters</h3>
+                        <p>3-bit Up Counter: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">up_counter_3bit.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-37">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-37">
 module up_counter_3bit ( 
    input wire clk,      // Clock input 
    input wire reset,    // Reset input (asynchronous) 
    output wire [2:0] y  // 3-bit Output 
 ); 
-   reg [2:0] count; // Counter register 
- 
+   reg [2:0] count;     // Counter register 
+   
    always @(posedge clk or posedge reset) begin 
       if (reset) 
          count <= 3'b000; // Reset the counter asynchronously 
@@ -1298,40 +1402,48 @@ module up_counter_3bit (
       else 
          count <= count + 1; // Increment on rising clock edge 
    end 
- 
+   
    assign y = count; 
 endmodule 
- 
-
-Testbench for 3-bit Up Counter: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 3-bit Up Counter: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_up_counter_3bit.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-38">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-38">
 module tb_up_counter_3bit; 
    reg clk; 
    reg reset; 
    wire [2:0] y; 
- 
+
    // Instantiate the 3-bit Up Counter module 
    up_counter_3bit counter ( 
       .clk(clk), 
       .reset(reset), 
       .y(y) 
    ); 
- 
+
    // Clock generation 
    always begin 
       #5 clk = ~clk; 
    end 
- 
+
    // Test scenario 
    initial begin 
       // Initialize signals 
       clk = 0; 
       reset = 0; 
- 
+
       // Apply reset 
       reset = 1; 
       #10 reset = 0; 
- 
+
       // Test case 1: Count from 0 to 7 
       #20 assert(y === 3'b000) else $display("Test case 1 failed"); 
       #10 assert(y === 3'b001) else $display("Test case 2 failed"); 
@@ -1341,22 +1453,30 @@ module tb_up_counter_3bit;
       #10 assert(y === 3'b101) else $display("Test case 6 failed"); 
       #10 assert(y === 3'b110) else $display("Test case 7 failed"); 
       #10 assert(y === 3'b111) else $display("Test case 8 failed"); 
- 
+
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-4-bit Ring Counter: 
-
+                           </code></pre>
+                        </div>
+                        <p>4-bit Ring Counter: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">ring_counter_4bit.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-39">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-39">
 module ring_counter_4bit ( 
    input wire clk,      // Clock input 
    input wire reset,    // Reset input (asynchronous) 
    output wire [3:0] y  // 4-bit Output 
 ); 
    reg [3:0] count; // Counter register 
- 
+   
    always @(posedge clk or posedge reset) begin 
       if (reset) 
          count <= 4'b0000; // Reset the counter asynchronously 
@@ -1365,40 +1485,48 @@ module ring_counter_4bit (
       else 
          count <= count + 1; // Increment on rising clock edge 
    end 
- 
+   
    assign y = count; 
 endmodule 
- 
-
-Testbench for 4-bit Ring Counter: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 4-bit Ring Counter: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_ring_counter_4bit.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-40">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-40">
 module tb_ring_counter_4bit; 
    reg clk; 
    reg reset; 
    wire [3:0] y; 
- 
+   
    // Instantiate the 4-bit Ring Counter module 
    ring_counter_4bit counter ( 
       .clk(clk), 
       .reset(reset), 
       .y(y) 
    ); 
- 
+   
    // Clock generation 
    always begin 
-      #5 clk = ~clk; 
+   #5 clk = ~clk; 
    end 
- 
+   
    // Test scenario 
    initial begin 
       // Initialize signals 
       clk = 0; 
       reset = 0; 
- 
+      
       // Apply reset 
       reset = 1; 
       #10 reset = 0; 
- 
+      
       // Test case 1: Count in a ring from 0000 to 1111 
       #10 assert(y === 4'b0000) else $display("Test case 1 failed"); 
       #10 assert(y === 4'b0001) else $display("Test case 2 failed"); 
@@ -1408,19 +1536,27 @@ module tb_ring_counter_4bit;
       #10 assert(y === 4'b1100) else $display("Test case 6 failed"); 
       #10 assert(y === 4'b1110) else $display("Test case 7 failed"); 
       #10 assert(y === 4'b1111) else $display("Test case 8 failed"); 
- 
+      
       // End simulation 
       $finish; 
    end 
-endmodule 
- 
-
-These Verilog code examples and testbenches demonstrate the functionality of a 3-bit Up Counter and a 4-bit Ring Counter, along with various test cases to verify their operation. 
-
-3. Memories 
-
-4x4 SRAM (Static Random Access Memory): 
-
+   endmodule 
+                           </code></pre>
+                        </div>
+                        <p>These Verilog code examples and testbenches demonstrate the functionality of a 3-bit Up Counter and a 4-bit Ring Counter, along with various test cases to verify their operation. </p>
+                     </li>
+                     <li>
+                        <h3>Memories </h3>
+                        <p>4x4 SRAM (Static Random Access Memory): </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">sram_4x4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-41">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-41">
 module sram_4x4 ( 
    input wire [1:0] addr,    // 2-bit Address 
    input wire write_en,     // Write Enable 
@@ -1428,24 +1564,32 @@ module sram_4x4 (
    output wire [3:0] data_out // 4-bit Data Output 
 ); 
    reg [3:0] memory [3:0]; // 4x4 memory array 
- 
+   
    always @(addr, write_en, data_in) begin 
       if (write_en) 
          memory[addr] <= data_in; // Write data to the selected address 
    end 
- 
+   
    assign data_out = memory[addr]; // Read data from the selected address 
 endmodule 
- 
-
-Testbench for 4x4 SRAM: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 4x4 SRAM: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_sram_4x4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-42">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-42">
 module tb_sram_4x4; 
    reg [1:0] addr; 
    reg write_en; 
    reg [3:0] data_in; 
    wire [3:0] data_out; 
- 
+   
    // Instantiate the 4x4 SRAM module 
    sram_4x4 sram ( 
       .addr(addr), 
@@ -1453,99 +1597,123 @@ module tb_sram_4x4;
       .data_in(data_in), 
       .data_out(data_out) 
    ); 
- 
+   
    // Test scenario 
    initial begin 
       // Initialize signals 
       addr = 2'b00; 
       write_en = 0; 
       data_in = 4'b0000; 
- 
+      
       // Write data to address 00 
       write_en = 1; 
       data_in = 4'b1100; 
       #10 write_en = 0; 
- 
+      
       // Read data from address 00 
       addr = 2'b00; 
       #10 assert(data_out === 4'b1100) else $display("Test case 1 failed"); 
- 
+      
       // Write data to address 01 
       write_en = 1; 
       data_in = 4'b0011; 
       #10 write_en = 0; 
- 
+      
       // Read data from address 01 
       addr = 2'b01; 
       #10 assert(data_out === 4'b0011) else $display("Test case 2 failed"); 
- 
+      
       // End simulation 
       $finish; 
    end 
-endmodule 
- 
-
-2x2 ROM (Read-Only Memory): 
-
+   endmodule 
+                           </code></pre>
+                        </div>
+                        <p>2x2 ROM (Read-Only Memory):</p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">rom_2x2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-43">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-43">
 module rom_2x2 ( 
-   input wire [1:0] addr,   // 2-bit Address 
+   input wire [1:0] addr,  // 2-bit Address 
    output wire [3:0] data  // 4-bit Data Output 
 ); 
    // Define ROM contents 
    reg [3:0] memory [3:0]; 
+
    initial begin 
       memory[2'b00] = 4'b1100; 
       memory[2'b01] = 4'b0011; 
       memory[2'b10] = 4'b1010; 
       memory[2'b11] = 4'b0101; 
-   end 
- 
+   end
+
    assign data = memory[addr]; // Read data based on the address 
 endmodule 
- 
-
-Testbench for 2x2 ROM: 
-
+                           </code></pre>
+                        </div>
+                        <p>Testbench for 2x2 ROM: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">rom_2x2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-44">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-44">
 module tb_rom_2x2; 
    reg [1:0] addr; 
    wire [3:0] data; 
- 
+   
    // Instantiate the 2x2 ROM module 
    rom_2x2 rom ( 
       .addr(addr), 
       .data(data) 
    ); 
- 
+   
    // Test scenario 
    initial begin 
       // Initialize signals 
       addr = 2'b00; 
- 
+      
       // Read data from address 00 
       #10 assert(data === 4'b1100) else $display("Test case 1 failed"); 
- 
+      
       // Change address to 01 
       addr = 2'b01; 
       #10 assert(data === 4'b0011) else $display("Test case 2 failed"); 
- 
+      
       // Change address to 10 
       addr = 2'b10; 
       #10 assert(data === 4'b1010) else $display("Test case 3 failed"); 
- 
+      
       // Change address to 11 
       addr = 2'b11; 
       #10 assert(data === 4'b0101) else $display("Test case 4 failed"); 
- 
+      
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-These Verilog code examples and testbenches demonstrate the functionality of a 4x4 SRAM and a 2x2 ROM, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. 
-
-4x4 DRAM  
-
+                           </code></pre>
+                        </div>
+                        <p>These Verilog code examples and testbenches demonstrate the functionality of a 4x4 SRAM and a 2x2 ROM, along with various test cases to verify their operation. You can use a Verilog simulator to run these testbenches and observe the results. </p>
+                        <p>4x4 DRAM :</p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">rom_2x2.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-45">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-45">
 module dram_4x4 ( 
    input wire clk,        // Clock input 
    input wire rst_n,      // Reset input (active low) 
@@ -1557,7 +1725,7 @@ module dram_4x4 (
    reg [3:0] memory [3:0]; // 4x4 memory array 
    reg row_addr;           // Row address register 
    reg col_addr;           // Column address register 
- 
+   
    always @(posedge clk or negedge rst_n) begin 
       if (!rst_n) begin 
          row_addr <= 0; 
@@ -1570,7 +1738,7 @@ module dram_4x4 (
          data_out <= memory[row_addr][col_addr]; 
       end 
    end 
- 
+   
    always @(posedge clk) begin 
       if (write_en) begin 
          // Update row and column addresses on a write operation 
@@ -1579,12 +1747,19 @@ module dram_4x4 (
       end 
    end 
 endmodule 
- 
-
-This simplified DRAM module includes a 4x4 memory array and basic row and column address management. It responds to read and write operations based on the clock and reset signals. However, it doesn't implement complex DRAM features like refresh cycles or page management, which are crucial in real-world DRAM designs. 
-
-Here's a basic testbench for the simplified DRAM module: 
-
+                           </code></pre>
+                        </div>
+                        <p>This simplified DRAM module includes a 4x4 memory array and basic row and column address management. It responds to read and write operations based on the clock and reset signals. However, it doesn't implement complex DRAM features like refresh cycles or page management, which are crucial in real-world DRAM designs.</p>
+                        <p>Here's a basic testbench for the simplified DRAM module: </p>
+                        <div class="code-box">
+                           <div class="code-header">
+                                 <span class="filename">tb_dram_4x4.v</span>
+                                 <!--<p class="file-name" onclick="openImageViewer('image1.jpg')">Image 1</p>-->
+                                 <button class="copy-button" onclick="openGitHubLink('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">View on GitHub</button>
+                                 <!--<button class="download-button" onclick="downloadGitHubFile('https://github.com/PavlosTzitzos/Verilog-Code/blob/main/Verilog/and_gate.v')">Download</button>-->
+                                 <button class="copy-button" data-code-id="code-46">Copy</button>
+                           </div>
+                           <pre><code class="language-verilog" id="code-46">
 module tb_dram_4x4; 
    reg clk; 
    reg rst_n; 
@@ -1592,7 +1767,7 @@ module tb_dram_4x4;
    reg [1:0] addr; 
    reg [3:0] data_in; 
    wire [3:0] data_out; 
- 
+   
    // Instantiate the 4x4 DRAM module 
    dram_4x4 dram ( 
       .clk(clk), 
@@ -1602,12 +1777,12 @@ module tb_dram_4x4;
       .data_in(data_in), 
       .data_out(data_out) 
    ); 
- 
+   
    // Clock generation 
    always begin 
       #5 clk = ~clk; 
    end 
- 
+   
    // Test scenario 
    initial begin 
       // Initialize signals 
@@ -1616,37 +1791,39 @@ module tb_dram_4x4;
       write_en = 0; 
       addr = 2'b00; 
       data_in = 4'b0000; 
- 
+      
       // Release reset 
       rst_n = 1; 
- 
+      
       // Write data to address 00 
       write_en = 1; 
       data_in = 4'b1100; 
       addr = 2'b00; 
       #10 write_en = 0; 
- 
+      
       // Read data from address 00 
       addr = 2'b00; 
       write_en = 0; 
       #10 assert(data_out === 4'b1100) else $display("Test case 1 failed"); 
- 
+      
       // End simulation 
       $finish; 
    end 
 endmodule 
- 
-
-This testbench provides a basic scenario where data is written to and read from the DRAM module. In a real DRAM design, you would need to consider complex timing requirements, refresh cycles, and address multiplexing. This example serves as a starting point for understanding the basic principles of a DRAM model. 
-                    </div>
-                </section>
+                           </code></pre>
+                        </div>
+                        <p>This testbench provides a basic scenario where data is written to and read from the DRAM module. In a real DRAM design, you would need to consider complex timing requirements, refresh cycles, and address multiplexing. This example serves as a starting point for understanding the basic principles of a DRAM model. </p>
+                     </li>
+                  </ol>
+               </div>
             </section>
-            
-            <section class="pages">
-               <!-- Content of your section goes here -->
-               <a href="../section-3/section-3.html" id="prevLink">Previous</a>
-               <a href="../index.html" id="nextLink">Back to Start</a>
-           </section>
+         </section>
+         
+         <section class="pages">
+            <!-- Content of your section goes here -->
+            <a href="../section-3/section-3.html" id="prevLink">Previous</a>
+            <a href="../index.html" id="nextLink">Back to Start</a>
+         </section>
       </main>
    </div>
    <footer class="footer">
@@ -1672,55 +1849,55 @@ This testbench provides a basic scenario where data is written to and read from 
    </footer>
 
    <script src="../theme.js"></script>
-    <script src="../navigation.js"></script>
-    <!-- Include Prism.js script for syntax highlighting -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
-    <script src="../copy.js"></script>
-    <script>
-        // JavaScript to show/hide section contents on header click
-        const sections = document.querySelectorAll('.collapsible');
-        
-        sections.forEach((section) => {
-            const header = section.querySelector('.header');
-            const contents = section.querySelector('.contents');
-            
-            // Hide contents by default
-            contents.style.display = 'none';
+   <script src="../navigation.js"></script>
+   <!-- Include Prism.js script for syntax highlighting -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/components/prism-verilog.min.js"></script>
+   <script src="../copy.js"></script>
+   <script>
+      // JavaScript to show/hide section contents on header click
+      const sections = document.querySelectorAll('.collapsible');
+      
+      sections.forEach((section) => {
+         const header = section.querySelector('.header');
+         const contents = section.querySelector('.contents');
+         
+         // Hide contents by default
+         contents.style.display = 'none';
 
-            header.addEventListener('click', () => {
-                contents.style.display = contents.style.display === 'none' ? 'block' : 'none';
-            });
-        });
-        // JavaScript to toggle subsections on click
-        const sectionTitles = document.querySelectorAll('.section-title');
+         header.addEventListener('click', () => {
+               contents.style.display = contents.style.display === 'none' ? 'block' : 'none';
+         });
+      });
+      // JavaScript to toggle subsections on click
+      const sectionTitles = document.querySelectorAll('.section-title');
 
-        sectionTitles.forEach((title) => {
-            const subsection = title.nextElementSibling;
-            subsection.style.display = 'none'; // Initially hide the subsections
+      sectionTitles.forEach((title) => {
+         const subsection = title.nextElementSibling;
+         subsection.style.display = 'none'; // Initially hide the subsections
 
-            title.addEventListener('click', () => {
-                subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
-            });
-        });
+         title.addEventListener('click', () => {
+               subsection.style.display = subsection.style.display === 'none' ? 'block' : 'none';
+         });
+      });
 
-        // Function to open the GitHub link in a new tab
-        function openGitHubLink(gitHubLink) {
-            window.open(gitHubLink, '_blank');
-        }
-        /*
-        // Function to trigger the download of a GitHub file
-        function downloadGitHubFile(gitHubLink) {
-            // Create an anchor element to trigger the download
-            var downloadLink = document.createElement('a');
-            downloadLink.href = gitHubLink;
-            downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
-            downloadLink.style.display = 'none';
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-        }
-        */
+      // Function to open the GitHub link in a new tab
+      function openGitHubLink(gitHubLink) {
+         window.open(gitHubLink, '_blank');
+      }
+      /*
+      // Function to trigger the download of a GitHub file
+      function downloadGitHubFile(gitHubLink) {
+         // Create an anchor element to trigger the download
+         var downloadLink = document.createElement('a');
+         downloadLink.href = gitHubLink;
+         downloadLink.download = gitHubLink.split('/').pop(); // Extract the file name from the GitHub URL
+         downloadLink.style.display = 'none';
+         document.body.appendChild(downloadLink);
+         downloadLink.click();
+         document.body.removeChild(downloadLink);
+      }
+      */
     </script>
 </body>
 </html>
