@@ -13,6 +13,14 @@ graph TD;
     Verilog-AMS-->SystemVerilog-AMS;
 ```
 
+## To Do List
+
+- [ ] fix the readme
+- [ ] fix the site make it more readable if possible use a Framework
+- [ ] add circuits to acompany the verilog snipets
+- [ ] continue the tutorial
+- [ ] add more resources
+
 Basic differences
 -----------------
 Verilog (HDL | digital | Icarus Verilog)
